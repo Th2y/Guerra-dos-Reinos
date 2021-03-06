@@ -4279,6 +4279,10 @@ MonoBehaviour:
   - {fileID: 1578205283}
   - {fileID: 1138062805}
   - {fileID: 812308773}
+  vez:
+  - {fileID: 1301583660}
+  - {fileID: 929925972}
+  vezJogador: 1
 --- !u!4 &1653143946
 Transform:
   m_ObjectHideFlags: 0
@@ -4305,9 +4309,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27c936b77c239ce4fa9aa4918aa07cbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vez:
-  - {fileID: 1301583658}
-  - {fileID: 929925970}
   casas:
   - {fileID: 2009963100}
   - {fileID: 464097733}

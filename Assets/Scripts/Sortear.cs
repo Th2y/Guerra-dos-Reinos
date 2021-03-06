@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Sortear : MonoBehaviour
 {
     private int i = 0;
+
     //Botões
     [SerializeField]
     private Button[] sortear;
@@ -17,6 +19,39 @@ public class Sortear : MonoBehaviour
     private Button[] retirar;
     [SerializeField]
     private Button[] casas;
+    [SerializeField]
+    private TextMeshProUGUI[] vez;
+
+    public bool vezJogador = true;
+    public static Sortear instancia;
+
+    private void Start()
+    {
+        instancia = this;
+    }
+
+    public void PassarVez()
+    {
+        PassouVez();
+    }
+
+    private void PassouVez()
+    {
+        if (vezJogador)
+        {
+            vez[1].gameObject.SetActive(true);
+            vez[0].gameObject.SetActive(false);
+            vezJogador = false;
+            Debug.Log("Vez do inimigo");
+        }
+        else
+        {
+            vez[0].gameObject.SetActive(true);
+            vez[1].gameObject.SetActive(false);
+            vezJogador = true;
+            Debug.Log("Vez do jogador");
+        }
+    }
 
     public void Sorteio()
     {

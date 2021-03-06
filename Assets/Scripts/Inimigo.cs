@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class Inimigo : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject[] vez;
+    private int casaJogar;
 
-    public void PassarVez()
+    public void Jogada()
     {
-        vez[0].SetActive(true);
-        vez[1].SetActive(false);
-        Debug.Log("Vez do jogador");
+        casaJogar = Random.Range(0, 8);
+
+        Sortear.instancia.PassarVez();
     }
 }

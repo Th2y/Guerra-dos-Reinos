@@ -6,18 +6,9 @@ using UnityEngine.UI;
 public class Jogadas : MonoBehaviour
 {
     [SerializeField]
-    private GameObject[] vez;
-    [SerializeField]
     private Button[] casas;
     [SerializeField]
     private Button[] habilidades;
-
-    public void PassarVez()
-    {
-        vez[1].SetActive(true);
-        vez[0].SetActive(false);
-        Debug.Log("Vez do inimigo");
-    }
 
     public void Jogou(int i)
     {
@@ -61,7 +52,6 @@ public class Jogadas : MonoBehaviour
                 Debug.Log("Casa 9");
                 break;
         }
-
-        PassarVez();
+        Sortear.instancia.PassarVez();
     }
 }
