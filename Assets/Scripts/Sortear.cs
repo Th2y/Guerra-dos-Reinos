@@ -108,5 +108,6 @@ public class Sortear : MonoBehaviour
 
 
         sortear[1].interactable = false;
+        Inimigo.instancia.Jogada();
     }
 }

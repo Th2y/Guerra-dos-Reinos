@@ -15,9 +15,13 @@ public class Casas : MonoBehaviour
 
     public void OnClick()
     {
-        this.tipoJogador = TipoJogador.Xis;
-        Sortear.instancia.PassarVez();
-        Interagir.instancia.Bloquear(false);
+        if (this.tipoJogador == TipoJogador.Nenhum)
+        {
+            this.tipoJogador = TipoJogador.Xis;
+            Sortear.instancia.PassarVez();
+            Interagir.instancia.Bloquear(false);
+            Sortear.instancia.SorteioIA();
+        }
 
         /*
         if (this.tipoJogador == TipoJogador.Nenhum)

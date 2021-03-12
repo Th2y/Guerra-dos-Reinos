@@ -13,6 +13,7 @@ public class Tabuleiro : MonoBehaviour
         TipoJogador jogadorVencedor = ObterVencedor();
         if (jogadorVencedor != TipoJogador.Nenhum)
         {
+            //Deverá fazer aparecer uma mensagem informando o vencedor (em um canvas)
             Debug.Log(jogadorVencedor + " venceu a partida.");
         }
     }
