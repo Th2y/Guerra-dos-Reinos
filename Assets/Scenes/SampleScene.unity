@@ -121,6 +121,44 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &118535700
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 118535701}
+  m_Layer: 5
+  m_Name: Linha 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &118535701
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 118535700}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2009963099}
+  - {fileID: 464097732}
+  - {fileID: 741450556}
+  m_Father: {fileID: 511333663}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &142642647
 GameObject:
   m_ObjectHideFlags: 0
@@ -482,6 +520,7 @@ GameObject:
   - component: {fileID: 248623590}
   - component: {fileID: 248623589}
   - component: {fileID: 248623588}
+  - component: {fileID: 248623591}
   m_Layer: 5
   m_Name: Button 4
   m_TagString: Untagged
@@ -502,8 +541,8 @@ RectTransform:
   m_Children:
   - {fileID: 435566578}
   - {fileID: 1898752641}
-  m_Father: {fileID: 511333663}
-  m_RootOrder: 4
+  m_Father: {fileID: 1132622377}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -553,9 +592,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1653143947}
-        m_MethodName: Jogou
-        m_Mode: 3
+      - m_Target: {fileID: 248623591}
+        m_MethodName: OnClick
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -612,6 +651,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 248623586}
   m_CullTransparentMesh: 0
+--- !u!114 &248623591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 248623586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3880aaba331c7c947beb5718d975f0fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &294262791
 GameObject:
   m_ObjectHideFlags: 0
@@ -850,6 +901,7 @@ GameObject:
   - component: {fileID: 464097735}
   - component: {fileID: 464097734}
   - component: {fileID: 464097733}
+  - component: {fileID: 464097736}
   m_Layer: 5
   m_Name: Button 1
   m_TagString: Untagged
@@ -870,7 +922,7 @@ RectTransform:
   m_Children:
   - {fileID: 802634826}
   - {fileID: 2085735689}
-  m_Father: {fileID: 511333663}
+  m_Father: {fileID: 118535701}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -921,9 +973,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1653143947}
-        m_MethodName: Jogou
-        m_Mode: 3
+      - m_Target: {fileID: 464097736}
+        m_MethodName: OnClick
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -980,6 +1032,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 464097731}
   m_CullTransparentMesh: 0
+--- !u!114 &464097736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464097731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3880aaba331c7c947beb5718d975f0fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &468153070
 GameObject:
   m_ObjectHideFlags: 0
@@ -1137,6 +1201,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 511333663}
+  - component: {fileID: 511333664}
   m_Layer: 5
   m_Name: Casas
   m_TagString: Untagged
@@ -1155,15 +1220,9 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 2009963099}
-  - {fileID: 464097732}
-  - {fileID: 741450556}
-  - {fileID: 2058107682}
-  - {fileID: 248623587}
-  - {fileID: 1131867476}
-  - {fileID: 1578205282}
-  - {fileID: 1138062804}
-  - {fileID: 812308772}
+  - {fileID: 118535701}
+  - {fileID: 1132622377}
+  - {fileID: 1744660192}
   m_Father: {fileID: 1976829835}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1172,6 +1231,28 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &511333664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511333662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4a491dc3be24974c8d3041481f47209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  casas:
+  - {fileID: 2009963100}
+  - {fileID: 464097733}
+  - {fileID: 741450557}
+  - {fileID: 2058107683}
+  - {fileID: 248623588}
+  - {fileID: 1131867477}
+  - {fileID: 1578205283}
+  - {fileID: 1138062805}
+  - {fileID: 812308773}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -2044,6 +2125,7 @@ GameObject:
   - component: {fileID: 741450559}
   - component: {fileID: 741450558}
   - component: {fileID: 741450557}
+  - component: {fileID: 741450560}
   m_Layer: 5
   m_Name: Button 2
   m_TagString: Untagged
@@ -2064,7 +2146,7 @@ RectTransform:
   m_Children:
   - {fileID: 468153071}
   - {fileID: 1014310447}
-  m_Father: {fileID: 511333663}
+  m_Father: {fileID: 118535701}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -2115,9 +2197,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1653143947}
-        m_MethodName: Jogou
-        m_Mode: 3
+      - m_Target: {fileID: 741450560}
+        m_MethodName: OnClick
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2174,6 +2256,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 741450555}
   m_CullTransparentMesh: 0
+--- !u!114 &741450560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 741450555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3880aaba331c7c947beb5718d975f0fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &796717764
 GameObject:
   m_ObjectHideFlags: 0
@@ -2390,6 +2484,7 @@ GameObject:
   - component: {fileID: 812308775}
   - component: {fileID: 812308774}
   - component: {fileID: 812308773}
+  - component: {fileID: 812308776}
   m_Layer: 5
   m_Name: Button 8
   m_TagString: Untagged
@@ -2410,8 +2505,8 @@ RectTransform:
   m_Children:
   - {fileID: 564330830}
   - {fileID: 1547048983}
-  m_Father: {fileID: 511333663}
-  m_RootOrder: 8
+  m_Father: {fileID: 1744660192}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2461,9 +2556,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1653143947}
-        m_MethodName: Jogou
-        m_Mode: 3
+      - m_Target: {fileID: 812308776}
+        m_MethodName: OnClick
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2520,6 +2615,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 812308771}
   m_CullTransparentMesh: 0
+--- !u!114 &812308776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 812308771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3880aaba331c7c947beb5718d975f0fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &853624113
 GameObject:
   m_ObjectHideFlags: 0
@@ -2992,6 +3099,7 @@ GameObject:
   - component: {fileID: 1131867479}
   - component: {fileID: 1131867478}
   - component: {fileID: 1131867477}
+  - component: {fileID: 1131867480}
   m_Layer: 5
   m_Name: Button 5
   m_TagString: Untagged
@@ -3012,8 +3120,8 @@ RectTransform:
   m_Children:
   - {fileID: 469632463}
   - {fileID: 707062919}
-  m_Father: {fileID: 511333663}
-  m_RootOrder: 5
+  m_Father: {fileID: 1132622377}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3063,9 +3171,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1653143947}
-        m_MethodName: Jogou
-        m_Mode: 3
+      - m_Target: {fileID: 1131867480}
+        m_MethodName: OnClick
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3122,6 +3230,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1131867475}
   m_CullTransparentMesh: 0
+--- !u!114 &1131867480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1131867475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3880aaba331c7c947beb5718d975f0fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1132622376
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1132622377}
+  m_Layer: 5
+  m_Name: Linha 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1132622377
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1132622376}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2058107682}
+  - {fileID: 248623587}
+  - {fileID: 1131867476}
+  m_Father: {fileID: 511333663}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1138062803
 GameObject:
   m_ObjectHideFlags: 0
@@ -3134,6 +3292,7 @@ GameObject:
   - component: {fileID: 1138062807}
   - component: {fileID: 1138062806}
   - component: {fileID: 1138062805}
+  - component: {fileID: 1138062808}
   m_Layer: 5
   m_Name: Button 7
   m_TagString: Untagged
@@ -3154,8 +3313,8 @@ RectTransform:
   m_Children:
   - {fileID: 1846718991}
   - {fileID: 232824895}
-  m_Father: {fileID: 511333663}
-  m_RootOrder: 7
+  m_Father: {fileID: 1744660192}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3205,9 +3364,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1653143947}
-        m_MethodName: Jogou
-        m_Mode: 3
+      - m_Target: {fileID: 1138062808}
+        m_MethodName: OnClick
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3264,6 +3423,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1138062803}
   m_CullTransparentMesh: 0
+--- !u!114 &1138062808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1138062803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3880aaba331c7c947beb5718d975f0fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1301583658
 GameObject:
   m_ObjectHideFlags: 0
@@ -4031,6 +4202,7 @@ GameObject:
   - component: {fileID: 1578205285}
   - component: {fileID: 1578205284}
   - component: {fileID: 1578205283}
+  - component: {fileID: 1578205286}
   m_Layer: 5
   m_Name: Button 6
   m_TagString: Untagged
@@ -4051,8 +4223,8 @@ RectTransform:
   m_Children:
   - {fileID: 1868256417}
   - {fileID: 1352822927}
-  m_Father: {fileID: 511333663}
-  m_RootOrder: 6
+  m_Father: {fileID: 1744660192}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4102,9 +4274,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1653143947}
-        m_MethodName: Jogou
-        m_Mode: 3
+      - m_Target: {fileID: 1578205286}
+        m_MethodName: OnClick
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4161,6 +4333,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1578205281}
   m_CullTransparentMesh: 0
+--- !u!114 &1578205286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1578205281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3880aaba331c7c947beb5718d975f0fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1645827818
 GameObject:
   m_ObjectHideFlags: 0
@@ -4237,7 +4421,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1653143946}
   - component: {fileID: 1653143945}
-  - component: {fileID: 1653143947}
   m_Layer: 0
   m_Name: Scripts
   m_TagString: Untagged
@@ -4297,32 +4480,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1653143947
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1653143944}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27c936b77c239ce4fa9aa4918aa07cbc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  casas:
-  - {fileID: 2009963100}
-  - {fileID: 464097733}
-  - {fileID: 741450557}
-  - {fileID: 2058107683}
-  - {fileID: 248623588}
-  - {fileID: 1131867477}
-  - {fileID: 1578205283}
-  - {fileID: 1138062805}
-  - {fileID: 812308773}
-  habilidades:
-  - {fileID: 664181443}
-  - {fileID: 552690881}
-  - {fileID: 1337895447}
 --- !u!1 &1678449673
 GameObject:
   m_ObjectHideFlags: 0
@@ -4356,6 +4513,44 @@ RectTransform:
   - {fileID: 637861280}
   - {fileID: 929925971}
   m_Father: {fileID: 1976829835}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1744660191
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1744660192}
+  m_Layer: 5
+  m_Name: Linha 3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1744660192
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1744660191}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1578205282}
+  - {fileID: 1138062804}
+  - {fileID: 812308772}
+  m_Father: {fileID: 511333663}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -4596,6 +4791,7 @@ GameObject:
   - component: {fileID: 1976829835}
   - component: {fileID: 1976829837}
   - component: {fileID: 1976829836}
+  - component: {fileID: 1976829838}
   m_Layer: 5
   m_Name: Jogo da velha
   m_TagString: Untagged
@@ -4662,6 +4858,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1976829834}
   m_CullTransparentMesh: 0
+--- !u!114 &1976829838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1976829834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b444fd34b8bfbff498d53e03d0c5999d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  combinacoes:
+  - casas:
+    - {fileID: 2009963103}
+    - {fileID: 464097736}
+    - {fileID: 741450560}
+  - casas:
+    - {fileID: 2058107686}
+    - {fileID: 248623591}
+    - {fileID: 1131867480}
+  - casas:
+    - {fileID: 1578205286}
+    - {fileID: 1138062808}
+    - {fileID: 812308776}
+  - casas:
+    - {fileID: 2009963103}
+    - {fileID: 2058107686}
+    - {fileID: 1578205286}
+  - casas:
+    - {fileID: 464097736}
+    - {fileID: 248623591}
+    - {fileID: 1138062808}
+  - casas:
+    - {fileID: 741450560}
+    - {fileID: 1131867480}
+    - {fileID: 812308776}
+  - casas:
+    - {fileID: 2009963103}
+    - {fileID: 248623591}
+    - {fileID: 812308776}
+  - casas:
+    - {fileID: 741450560}
+    - {fileID: 248623591}
+    - {fileID: 1578205286}
 --- !u!1 &2009963098
 GameObject:
   m_ObjectHideFlags: 0
@@ -4674,6 +4915,7 @@ GameObject:
   - component: {fileID: 2009963102}
   - component: {fileID: 2009963101}
   - component: {fileID: 2009963100}
+  - component: {fileID: 2009963103}
   m_Layer: 5
   m_Name: Button 0
   m_TagString: Untagged
@@ -4694,7 +4936,7 @@ RectTransform:
   m_Children:
   - {fileID: 294262792}
   - {fileID: 853624114}
-  m_Father: {fileID: 511333663}
+  m_Father: {fileID: 118535701}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -4745,9 +4987,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1653143947}
-        m_MethodName: Jogou
-        m_Mode: 3
+      - m_Target: {fileID: 2009963103}
+        m_MethodName: OnClick
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4804,6 +5046,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2009963098}
   m_CullTransparentMesh: 0
+--- !u!114 &2009963103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2009963098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3880aaba331c7c947beb5718d975f0fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2026129711
 GameObject:
   m_ObjectHideFlags: 0
@@ -4890,6 +5144,7 @@ GameObject:
   - component: {fileID: 2058107685}
   - component: {fileID: 2058107684}
   - component: {fileID: 2058107683}
+  - component: {fileID: 2058107686}
   m_Layer: 5
   m_Name: Button 3
   m_TagString: Untagged
@@ -4910,8 +5165,8 @@ RectTransform:
   m_Children:
   - {fileID: 1310070177}
   - {fileID: 2026129712}
-  m_Father: {fileID: 511333663}
-  m_RootOrder: 3
+  m_Father: {fileID: 1132622377}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4961,9 +5216,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1653143947}
-        m_MethodName: Jogou
-        m_Mode: 3
+      - m_Target: {fileID: 2058107686}
+        m_MethodName: OnClick
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5020,6 +5275,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2058107681}
   m_CullTransparentMesh: 0
+--- !u!114 &2058107686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2058107681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3880aaba331c7c947beb5718d975f0fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2085735688
 GameObject:
   m_ObjectHideFlags: 0
