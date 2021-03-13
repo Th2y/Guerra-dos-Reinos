@@ -10,25 +10,38 @@ public class Vidas : MonoBehaviour
 
     private void Start()
     {
-        if (!PlayerPrefs.HasKey("vidas"))
-            PlayerPrefs.SetInt("vidas", vidas);
+        if (!PlayerPrefs.HasKey("Vidas"))
+            PlayerPrefs.SetInt("Vidas", vidas);
         else
-            vidas = PlayerPrefs.GetInt("vidas");
+            vidas = PlayerPrefs.GetInt("Vidas");
 
         quantVidas.text = vidas.ToString();
     }
 
     public void PerderVida()
     {
-        vidas--;
-        PlayerPrefs.SetInt("vidas", vidas);
-        quantVidas.text = vidas.ToString();
+        if(vidas > 0)
+        {
+            vidas--;
+            PlayerPrefs.SetInt("Vidas", vidas);
+            quantVidas.text = vidas.ToString();
+        }
     }
 
     public void GanharVida()
     {
+        if(vidas < 5)
+        {
+            vidas++;
+            PlayerPrefs.SetInt("Vidas", vidas);
+            quantVidas.text = vidas.ToString();
+        }
+    }
+
+    public void ComprarVida(int quant)
+    {
         vidas++;
-        PlayerPrefs.SetInt("vidas", vidas);
+        PlayerPrefs.SetInt("Vidas", vidas);
         quantVidas.text = vidas.ToString();
     }
 }
