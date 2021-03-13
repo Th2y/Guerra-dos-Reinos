@@ -6,8 +6,6 @@ using TMPro;
 
 public class Sortear : MonoBehaviour
 {
-    private int i = 0;
-
     //Botões
     public Button[] sortear;
     [SerializeField]
@@ -21,16 +19,15 @@ public class Sortear : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI[] vez;
 
-    public bool vezJogador = true;
-    public static Sortear instancia;
-
     [SerializeField]
     private Tabuleiro tabuleiro;
+    [SerializeField]
+    private Interagir interagir;
+    [SerializeField]
+    private Inimigo inimigo;
 
-    private void Start()
-    {
-        instancia = this;
-    }
+    private int i = 0;
+    public bool vezJogador = true;
 
     public void PassarVez()
     {
@@ -58,11 +55,7 @@ public class Sortear : MonoBehaviour
     public void Sorteio()
     {
         i = Random.Range(1, 6);
-        for (int a = 0; a < 9; a++)
-        {
-            //Conferir se a casa não está ocupada, caso sim, verificar se pelo jogador ou pelo inimigo
-            casas[a].interactable = true;
-        }
+        interagir.Bloquear(true);
 
         if (i == 2)
         {
@@ -110,6 +103,6 @@ public class Sortear : MonoBehaviour
 
 
         sortear[1].interactable = false;
-        Inimigo.instancia.Jogada();
+        inimigo.Jogada();
     }
 }

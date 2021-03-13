@@ -8,19 +8,14 @@ public class CasasInimigo : MonoBehaviour
 
     [SerializeField]
     private Casas casasJogador;
-
-    public static CasasInimigo instancia;
-
-    void Start()
-    {
-        instancia = this;
-    }
+    [SerializeField]
+    private Sortear sortear;
 
     public void Jogar()
     {
         casasJogador.tipoJogador = TipoJogador.Bola;
         bola.gameObject.SetActive(true);
-        Sortear.instancia.PassarVez();
-        Sortear.instancia.sortear[0].interactable = true;
+        sortear.PassarVez();
+        sortear.sortear[0].interactable = true;
     }
 }

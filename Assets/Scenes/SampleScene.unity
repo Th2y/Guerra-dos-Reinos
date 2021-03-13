@@ -665,6 +665,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   casa: {fileID: 248623588}
+  interagir: {fileID: 511333664}
+  sortear: {fileID: 1653143945}
   tipoJogador: 2
 --- !u!114 &248623592
 MonoBehaviour:
@@ -680,6 +682,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bola: {fileID: 435566579}
   casasJogador: {fileID: 248623591}
+  sortear: {fileID: 1653143945}
 --- !u!1 &294262791
 GameObject:
   m_ObjectHideFlags: 0
@@ -1219,6 +1222,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   casa: {fileID: 464097733}
+  interagir: {fileID: 511333664}
+  sortear: {fileID: 1653143945}
   tipoJogador: 2
 --- !u!114 &464097737
 MonoBehaviour:
@@ -1234,6 +1239,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bola: {fileID: 802634827}
   casasJogador: {fileID: 464097736}
+  sortear: {fileID: 1653143945}
 --- !u!1 &468153070
 GameObject:
   m_ObjectHideFlags: 0
@@ -2461,6 +2467,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   casa: {fileID: 741450557}
+  interagir: {fileID: 511333664}
+  sortear: {fileID: 1653143945}
   tipoJogador: 2
 --- !u!114 &741450561
 MonoBehaviour:
@@ -2476,6 +2484,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bola: {fileID: 468153072}
   casasJogador: {fileID: 741450560}
+  sortear: {fileID: 1653143945}
 --- !u!1 &796717764
 GameObject:
   m_ObjectHideFlags: 0
@@ -2837,6 +2846,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   casa: {fileID: 812308773}
+  interagir: {fileID: 511333664}
+  sortear: {fileID: 1653143945}
   tipoJogador: 2
 --- !u!114 &812308777
 MonoBehaviour:
@@ -2852,6 +2863,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bola: {fileID: 564330831}
   casasJogador: {fileID: 812308776}
+  sortear: {fileID: 1653143945}
 --- !u!1 &853624113
 GameObject:
   m_ObjectHideFlags: 0
@@ -3469,6 +3481,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   casa: {fileID: 1131867477}
+  interagir: {fileID: 511333664}
+  sortear: {fileID: 1653143945}
   tipoJogador: 2
 --- !u!114 &1131867481
 MonoBehaviour:
@@ -3484,6 +3498,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bola: {fileID: 469632464}
   casasJogador: {fileID: 1131867480}
+  sortear: {fileID: 1653143945}
 --- !u!1 &1132622376
 GameObject:
   m_ObjectHideFlags: 0
@@ -3679,6 +3694,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   casa: {fileID: 1138062805}
+  interagir: {fileID: 511333664}
+  sortear: {fileID: 1653143945}
   tipoJogador: 2
 --- !u!114 &1138062809
 MonoBehaviour:
@@ -3694,6 +3711,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bola: {fileID: 1846718992}
   casasJogador: {fileID: 1138062808}
+  sortear: {fileID: 1653143945}
 --- !u!1 &1301583658
 GameObject:
   m_ObjectHideFlags: 0
@@ -4838,6 +4856,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   casa: {fileID: 1578205283}
+  interagir: {fileID: 511333664}
+  sortear: {fileID: 1653143945}
   tipoJogador: 2
 --- !u!114 &1578205287
 MonoBehaviour:
@@ -4853,6 +4873,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bola: {fileID: 1868256418}
   casasJogador: {fileID: 1578205286}
+  sortear: {fileID: 1653143945}
 --- !u!1 &1645827818
 GameObject:
   m_ObjectHideFlags: 0
@@ -4974,8 +4995,10 @@ MonoBehaviour:
   vez:
   - {fileID: 1301583660}
   - {fileID: 929925972}
-  vezJogador: 1
   tabuleiro: {fileID: 1976829838}
+  interagir: {fileID: 511333664}
+  inimigo: {fileID: 1653143947}
+  vezJogador: 1
 --- !u!4 &1653143946
 Transform:
   m_ObjectHideFlags: 0
@@ -5414,6 +5437,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b444fd34b8bfbff498d53e03d0c5999d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  painelVencedor: {fileID: 1400556078}
+  vencedor: {fileID: 1563951652}
+  jogadas: 0
   combinacoes:
   - casas:
     - {fileID: 2009963103}
@@ -5447,9 +5473,6 @@ MonoBehaviour:
     - {fileID: 741450560}
     - {fileID: 248623591}
     - {fileID: 1578205286}
-  painelVencedor: {fileID: 1400556078}
-  vencedor: {fileID: 1563951652}
-  jogadas: 0
 --- !u!1 &2009963098
 GameObject:
   m_ObjectHideFlags: 0
@@ -5607,6 +5630,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   casa: {fileID: 2009963100}
+  interagir: {fileID: 511333664}
+  sortear: {fileID: 1653143945}
   tipoJogador: 2
 --- !u!114 &2009963104
 MonoBehaviour:
@@ -5622,6 +5647,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bola: {fileID: 294262793}
   casasJogador: {fileID: 2009963103}
+  sortear: {fileID: 1653143945}
 --- !u!1 &2026129711
 GameObject:
   m_ObjectHideFlags: 0
@@ -5853,6 +5879,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   casa: {fileID: 2058107683}
+  interagir: {fileID: 511333664}
+  sortear: {fileID: 1653143945}
   tipoJogador: 2
 --- !u!114 &2058107687
 MonoBehaviour:
@@ -5868,6 +5896,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bola: {fileID: 1310070178}
   casasJogador: {fileID: 2058107686}
+  sortear: {fileID: 1653143945}
 --- !u!1 &2085735688
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,11 +6,9 @@ public class Interagir : MonoBehaviour
     [SerializeField]
     private Button[] casas;
 
-    public static Interagir instancia;
-
     private void Start()
     {
-        instancia = this;
+        Bloquear(true);
     }
 
     public void Bloquear(bool bloqueio)

@@ -6,14 +6,16 @@ public class Casas : MonoBehaviour
     [SerializeField]
     private Button casa;
 
+    [SerializeField]
+    private Interagir interagir;
+    [SerializeField]
+    private Sortear sortear;
+
     public TipoJogador tipoJogador;
     public static TipoJogador tipos;
-    public static Casas instancia;
 
     private void Awake()
     {
-        instancia = this;
-
         this.tipoJogador = TipoJogador.Nenhum;
         tipos = tipoJogador;
     }
@@ -23,9 +25,9 @@ public class Casas : MonoBehaviour
         if (this.tipoJogador == TipoJogador.Nenhum)
         {
             this.tipoJogador = TipoJogador.Xis;
-            Sortear.instancia.PassarVez();
-            Interagir.instancia.Bloquear(false);
-            Sortear.instancia.SorteioIA();
+            sortear.PassarVez();
+            interagir.Bloquear(false);
+            sortear.SorteioIA();
         }
         else if (this.tipoJogador == TipoJogador.Xis)
         {
