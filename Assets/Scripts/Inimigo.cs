@@ -11,6 +11,9 @@ public class Inimigo : MonoBehaviour
     [SerializeField]
     private Casas[] casasJogador;
 
+    [SerializeField]
+    private Tabuleiro tabuleiro;
+
     private void Awake()
     {
         this.tipoJogador = TipoJogador.Nenhum;
@@ -23,11 +26,14 @@ public class Inimigo : MonoBehaviour
 
     public void Jogada()
     {
-        casaJogar = Random.Range(0, 8);
+        if(tabuleiro.jogadas != 9)
+        {
+            casaJogar = Random.Range(0, 8);
 
-        if (casasJogador[casaJogar].tipoJogador == TipoJogador.Nenhum)
-            casas[casaJogar].Jogar();
-        else
-            Jogada();
+            if (casasJogador[casaJogar].tipoJogador == TipoJogador.Nenhum)
+                casas[casaJogar].Jogar();
+            else
+                Jogada();
+        }
     }
 }

@@ -3,9 +3,7 @@
 [System.Serializable]
 public class Combinacoes
 {
-    /// <summary>
-    /// Lista de c�lulas que formam uma combina��o
-    /// </summary>
+    // Lista de casas que formam uma combinação
     [SerializeField]
     private Casas[] casas;
 
@@ -16,25 +14,22 @@ public class Combinacoes
         {
             foreach (Casas casas in this.casas)
             {
-                // Alguma c�lula possui um "marcador" diferente
+                // Alguma casa possui um "marcador" diferente
                 if (casas.TipoJogador != tipoJogador)
                 {
                     return false;
                 }
             }
-            // Todos os marcadores s�o iguais (X ou O)
+            // Todos os marcadores são iguais (X ou O)
             return true;
         }
-        // Uma ou mais c�lulas n�o est�o marcadas
+        // Uma ou mais casas não estão marcadas
         return false;
     }
 
-    /// <summary>
-    /// 
-    /// </summary>
     public TipoJogador ObterTipoJogadorVencedor()
     {
-        // Se a combina��o est� completa
+        // Se a combinação está completa
         if (EstaCompleta())
         {
             // Retorna o tipo do jogador vencedor
@@ -42,7 +37,7 @@ public class Combinacoes
             return tipoJogador;
         }
 
-        // Retorna o valor padr�o, informando que ningu�m venceu
+        // Retorna o valor padrão, informando que ninguém venceu
         return TipoJogador.Nenhum;
     }
 }

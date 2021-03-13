@@ -24,6 +24,9 @@ public class Sortear : MonoBehaviour
     public bool vezJogador = true;
     public static Sortear instancia;
 
+    [SerializeField]
+    private Tabuleiro tabuleiro;
+
     private void Start()
     {
         instancia = this;
@@ -36,6 +39,8 @@ public class Sortear : MonoBehaviour
 
     private void PassouVez()
     {
+        tabuleiro.jogadas++;
+
         if (vezJogador)
         {
             vez[1].gameObject.SetActive(true);
