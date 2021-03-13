@@ -679,6 +679,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bola: {fileID: 435566579}
+  casasJogador: {fileID: 248623591}
 --- !u!1 &294262791
 GameObject:
   m_ObjectHideFlags: 0
@@ -1076,6 +1077,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bola: {fileID: 802634827}
+  casasJogador: {fileID: 464097736}
 --- !u!1 &468153070
 GameObject:
   m_ObjectHideFlags: 0
@@ -2316,6 +2318,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bola: {fileID: 468153072}
+  casasJogador: {fileID: 741450560}
 --- !u!1 &796717764
 GameObject:
   m_ObjectHideFlags: 0
@@ -2691,6 +2694,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bola: {fileID: 564330831}
+  casasJogador: {fileID: 812308776}
 --- !u!1 &853624113
 GameObject:
   m_ObjectHideFlags: 0
@@ -3322,6 +3326,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bola: {fileID: 469632464}
+  casasJogador: {fileID: 1131867480}
 --- !u!1 &1132622376
 GameObject:
   m_ObjectHideFlags: 0
@@ -3531,6 +3536,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bola: {fileID: 1846718992}
+  casasJogador: {fileID: 1138062808}
 --- !u!1 &1301583658
 GameObject:
   m_ObjectHideFlags: 0
@@ -4457,6 +4463,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bola: {fileID: 1868256418}
+  casasJogador: {fileID: 1578205286}
 --- !u!1 &1645827818
 GameObject:
   m_ObjectHideFlags: 0
@@ -4605,6 +4612,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 349c2b85c5f7be3449ae503c75b9efc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  casaJogar: 0
   casas:
   - {fileID: 2009963104}
   - {fileID: 464097737}
@@ -4615,6 +4623,16 @@ MonoBehaviour:
   - {fileID: 1578205287}
   - {fileID: 1138062809}
   - {fileID: 812308777}
+  casasJogador:
+  - {fileID: 2009963103}
+  - {fileID: 464097736}
+  - {fileID: 741450560}
+  - {fileID: 2058107686}
+  - {fileID: 248623591}
+  - {fileID: 1131867480}
+  - {fileID: 1578205286}
+  - {fileID: 1138062808}
+  - {fileID: 812308776}
 --- !u!1 &1678449673
 GameObject:
   m_ObjectHideFlags: 0
@@ -5209,6 +5227,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bola: {fileID: 294262793}
+  casasJogador: {fileID: 2009963103}
 --- !u!1 &2026129711
 GameObject:
   m_ObjectHideFlags: 0
@@ -5454,6 +5473,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bola: {fileID: 1310070178}
+  casasJogador: {fileID: 2058107686}
 --- !u!1 &2085735688
 GameObject:
   m_ObjectHideFlags: 0

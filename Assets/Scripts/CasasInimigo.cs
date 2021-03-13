@@ -6,6 +6,9 @@ public class CasasInimigo : MonoBehaviour
     [SerializeField]
     private Image bola;
 
+    [SerializeField]
+    private Casas casasJogador;
+
     public static CasasInimigo instancia;
 
     void Start()
@@ -15,13 +18,9 @@ public class CasasInimigo : MonoBehaviour
 
     public void Jogar()
     {
-        if (Casas.instancia.tipoJogador == TipoJogador.Nenhum)
-        {
-            bola.gameObject.SetActive(true);
-            Sortear.instancia.PassarVez();
-            Sortear.instancia.sortear[0].interactable = true;
-        }
-        else
-            Inimigo.instancia.Jogada();
+        casasJogador.tipoJogador = TipoJogador.Bola;
+        bola.gameObject.SetActive(true);
+        Sortear.instancia.PassarVez();
+        Sortear.instancia.sortear[0].interactable = true;
     }
 }
