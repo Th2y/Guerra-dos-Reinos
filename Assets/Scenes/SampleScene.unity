@@ -521,6 +521,7 @@ GameObject:
   - component: {fileID: 248623589}
   - component: {fileID: 248623588}
   - component: {fileID: 248623591}
+  - component: {fileID: 248623592}
   m_Layer: 5
   m_Name: Button 4
   m_TagString: Untagged
@@ -663,6 +664,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3880aaba331c7c947beb5718d975f0fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  casa: {fileID: 248623588}
+  tipoJogador: 2
+--- !u!114 &248623592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 248623586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67e60e0a40c22a649bd4b9dc9eff5939, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bola: {fileID: 435566579}
 --- !u!1 &294262791
 GameObject:
   m_ObjectHideFlags: 0
@@ -902,6 +918,7 @@ GameObject:
   - component: {fileID: 464097734}
   - component: {fileID: 464097733}
   - component: {fileID: 464097736}
+  - component: {fileID: 464097737}
   m_Layer: 5
   m_Name: Button 1
   m_TagString: Untagged
@@ -1044,6 +1061,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3880aaba331c7c947beb5718d975f0fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  casa: {fileID: 464097733}
+  tipoJogador: 2
+--- !u!114 &464097737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464097731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67e60e0a40c22a649bd4b9dc9eff5939, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bola: {fileID: 802634827}
 --- !u!1 &468153070
 GameObject:
   m_ObjectHideFlags: 0
@@ -2126,6 +2158,7 @@ GameObject:
   - component: {fileID: 741450558}
   - component: {fileID: 741450557}
   - component: {fileID: 741450560}
+  - component: {fileID: 741450561}
   m_Layer: 5
   m_Name: Button 2
   m_TagString: Untagged
@@ -2268,6 +2301,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3880aaba331c7c947beb5718d975f0fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  casa: {fileID: 741450557}
+  tipoJogador: 2
+--- !u!114 &741450561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 741450555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67e60e0a40c22a649bd4b9dc9eff5939, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bola: {fileID: 468153072}
 --- !u!1 &796717764
 GameObject:
   m_ObjectHideFlags: 0
@@ -2485,6 +2533,7 @@ GameObject:
   - component: {fileID: 812308774}
   - component: {fileID: 812308773}
   - component: {fileID: 812308776}
+  - component: {fileID: 812308777}
   m_Layer: 5
   m_Name: Button 8
   m_TagString: Untagged
@@ -2627,6 +2676,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3880aaba331c7c947beb5718d975f0fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  casa: {fileID: 812308773}
+  tipoJogador: 2
+--- !u!114 &812308777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 812308771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67e60e0a40c22a649bd4b9dc9eff5939, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bola: {fileID: 564330831}
 --- !u!1 &853624113
 GameObject:
   m_ObjectHideFlags: 0
@@ -3100,6 +3164,7 @@ GameObject:
   - component: {fileID: 1131867478}
   - component: {fileID: 1131867477}
   - component: {fileID: 1131867480}
+  - component: {fileID: 1131867481}
   m_Layer: 5
   m_Name: Button 5
   m_TagString: Untagged
@@ -3242,6 +3307,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3880aaba331c7c947beb5718d975f0fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  casa: {fileID: 1131867477}
+  tipoJogador: 2
+--- !u!114 &1131867481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1131867475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67e60e0a40c22a649bd4b9dc9eff5939, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bola: {fileID: 469632464}
 --- !u!1 &1132622376
 GameObject:
   m_ObjectHideFlags: 0
@@ -3293,6 +3373,7 @@ GameObject:
   - component: {fileID: 1138062806}
   - component: {fileID: 1138062805}
   - component: {fileID: 1138062808}
+  - component: {fileID: 1138062809}
   m_Layer: 5
   m_Name: Button 7
   m_TagString: Untagged
@@ -3435,6 +3516,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3880aaba331c7c947beb5718d975f0fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  casa: {fileID: 1138062805}
+  tipoJogador: 2
+--- !u!114 &1138062809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1138062803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67e60e0a40c22a649bd4b9dc9eff5939, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bola: {fileID: 1846718992}
 --- !u!1 &1301583658
 GameObject:
   m_ObjectHideFlags: 0
@@ -4203,6 +4299,7 @@ GameObject:
   - component: {fileID: 1578205284}
   - component: {fileID: 1578205283}
   - component: {fileID: 1578205286}
+  - component: {fileID: 1578205287}
   m_Layer: 5
   m_Name: Button 6
   m_TagString: Untagged
@@ -4345,6 +4442,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3880aaba331c7c947beb5718d975f0fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  casa: {fileID: 1578205283}
+  tipoJogador: 2
+--- !u!114 &1578205287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1578205281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67e60e0a40c22a649bd4b9dc9eff5939, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bola: {fileID: 1868256418}
 --- !u!1 &1645827818
 GameObject:
   m_ObjectHideFlags: 0
@@ -4493,6 +4605,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 349c2b85c5f7be3449ae503c75b9efc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  casas:
+  - {fileID: 2009963104}
+  - {fileID: 464097737}
+  - {fileID: 741450561}
+  - {fileID: 2058107687}
+  - {fileID: 248623592}
+  - {fileID: 1131867481}
+  - {fileID: 1578205287}
+  - {fileID: 1138062809}
+  - {fileID: 812308777}
 --- !u!1 &1678449673
 GameObject:
   m_ObjectHideFlags: 0
@@ -4929,6 +5051,7 @@ GameObject:
   - component: {fileID: 2009963101}
   - component: {fileID: 2009963100}
   - component: {fileID: 2009963103}
+  - component: {fileID: 2009963104}
   m_Layer: 5
   m_Name: Button 0
   m_TagString: Untagged
@@ -5071,6 +5194,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3880aaba331c7c947beb5718d975f0fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  casa: {fileID: 2009963100}
+  tipoJogador: 2
+--- !u!114 &2009963104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2009963098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67e60e0a40c22a649bd4b9dc9eff5939, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bola: {fileID: 294262793}
 --- !u!1 &2026129711
 GameObject:
   m_ObjectHideFlags: 0
@@ -5158,6 +5296,7 @@ GameObject:
   - component: {fileID: 2058107684}
   - component: {fileID: 2058107683}
   - component: {fileID: 2058107686}
+  - component: {fileID: 2058107687}
   m_Layer: 5
   m_Name: Button 3
   m_TagString: Untagged
@@ -5300,6 +5439,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3880aaba331c7c947beb5718d975f0fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  casa: {fileID: 2058107683}
+  tipoJogador: 2
+--- !u!114 &2058107687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2058107681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67e60e0a40c22a649bd4b9dc9eff5939, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bola: {fileID: 1310070178}
 --- !u!1 &2085735688
 GameObject:
   m_ObjectHideFlags: 0

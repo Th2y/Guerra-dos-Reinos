@@ -3,14 +3,19 @@ using UnityEngine.UI;
 
 public class Casas : MonoBehaviour
 {
-    //[SerializeField]
-    //private Text textoSimbolo;
+    [SerializeField]
+    private Button casa;
 
-    private TipoJogador tipoJogador;
+    public TipoJogador tipoJogador;
+    public static TipoJogador tipos;
+    public static Casas instancia;
 
     private void Awake()
     {
+        instancia = this;
+
         this.tipoJogador = TipoJogador.Nenhum;
+        tipos = tipoJogador;
     }
 
     public void OnClick()
@@ -22,23 +27,14 @@ public class Casas : MonoBehaviour
             Interagir.instancia.Bloquear(false);
             Sortear.instancia.SorteioIA();
         }
-
-        /*
-        if (this.tipoJogador == TipoJogador.Nenhum)
-        {
-            this.tipoJogador = TipoJogador.Xis;
-            this.textoSimbolo.text = "X";
-        }
         else if (this.tipoJogador == TipoJogador.Xis)
         {
-            this.tipoJogador = TipoJogador.Bola;
-            this.textoSimbolo.text = "O";
+            casa.interactable = false;
         }
         else if (this.tipoJogador == TipoJogador.Bola)
         {
-            this.tipoJogador = TipoJogador.Nenhum;
-            this.textoSimbolo.text = "";
-        }*/
+            casa.interactable = false;
+        }
     }
 
     public TipoJogador TipoJogador

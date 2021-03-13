@@ -9,8 +9,7 @@ public class Sortear : MonoBehaviour
     private int i = 0;
 
     //Botões
-    [SerializeField]
-    private Button[] sortear;
+    public Button[] sortear;
     [SerializeField]
     private Button[] bloquear;
     [SerializeField]
@@ -42,14 +41,12 @@ public class Sortear : MonoBehaviour
             vez[1].gameObject.SetActive(true);
             vez[0].gameObject.SetActive(false);
             vezJogador = false;
-            Debug.Log("Vez do inimigo");
         }
         else
         {
             vez[0].gameObject.SetActive(true);
             vez[1].gameObject.SetActive(false);
             vezJogador = true;
-            Debug.Log("Vez do jogador");
         }
     }
 
@@ -64,21 +61,21 @@ public class Sortear : MonoBehaviour
 
         if (i == 2)
         {
-            Debug.Log(i + " bloquear");
+            Debug.Log(i + " bloquear jogador");
             bloquear[0].interactable = true;
         }
         else if (i == 4)
         {
-            Debug.Log(i + " mudar");
+            Debug.Log(i + " mudar jogador");
             mudar[0].interactable = true;
         }
         else if (i == 6)
         {
-            Debug.Log(i + " retirar");
+            Debug.Log(i + " retirar jogador");
             retirar[0].interactable = true;
         }
         else
-            Debug.Log(i + " nada");
+            Debug.Log(i + " nada jogador");
 
 
         sortear[0].interactable = false;
@@ -90,21 +87,21 @@ public class Sortear : MonoBehaviour
 
         if (i == 2)
         {
-            Debug.Log(i + " bloquear");
+            Debug.Log(i + " bloquear inimigo");
             bloquear[1].interactable = true;
         }
         else if (i == 4)
         {
-            Debug.Log(i + " mudar");
+            Debug.Log(i + " mudar inimigo");
             mudar[1].interactable = true;
         }
         else if (i == 6)
         {
-            Debug.Log(i + " retirar");
+            Debug.Log(i + " retirar inimigo");
             retirar[1].interactable = true;
         }
         else
-            Debug.Log(i + " nada");
+            Debug.Log(i + " nada inimigo");
 
 
         sortear[1].interactable = false;
