@@ -5,6 +5,8 @@ public class Interagir : MonoBehaviour
 {
     [SerializeField]
     private Button[] casas;
+    [SerializeField]
+    private Casas[] casasJogador;
 
     private void Start()
     {
@@ -15,7 +17,10 @@ public class Interagir : MonoBehaviour
     {
         for (int i = 0; i < casas.Length; i++)
         {
-            casas[i].interactable = bloqueio;
+            if(casasJogador[i].tipoJogador == TipoJogador.Nenhum)
+                casas[i].interactable = bloqueio;
+            else
+                casas[i].interactable = false;
         }
     }
 }

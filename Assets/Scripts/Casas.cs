@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class Casas : MonoBehaviour
 {
     [SerializeField]
-    private Button casa;
+    private Image xisImage;
 
     [SerializeField]
     private Interagir interagir;
@@ -20,23 +20,13 @@ public class Casas : MonoBehaviour
         tipos = tipoJogador;
     }
 
-    public void OnClick()
+    public void Clicou()
     {
-        if (this.tipoJogador == TipoJogador.Nenhum)
-        {
-            this.tipoJogador = TipoJogador.Xis;
-            sortear.PassarVez();
-            interagir.Bloquear(false);
-            sortear.SorteioIA();
-        }
-        else if (this.tipoJogador == TipoJogador.Xis)
-        {
-            casa.interactable = false;
-        }
-        else if (this.tipoJogador == TipoJogador.Bola)
-        {
-            casa.interactable = false;
-        }
+        xisImage.gameObject.SetActive(true);
+        this.tipoJogador = TipoJogador.Xis;
+        sortear.PassarVez();
+        interagir.Bloquear(false);
+        sortear.SorteioIA();
     }
 
     public TipoJogador TipoJogador

@@ -3,7 +3,6 @@ using TMPro;
 
 public class Tabuleiro : MonoBehaviour
 {
-
     [SerializeField]
     private GameObject painelVencedor;
     [SerializeField]

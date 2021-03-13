@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
@@ -74,7 +72,6 @@ public class Sortear : MonoBehaviour
         }
         //else
         //Debug.Log(i + " nada jogador");
-
 
         sortear[0].interactable = false;
     }

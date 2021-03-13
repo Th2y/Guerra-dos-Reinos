@@ -594,7 +594,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 248623591}
-        m_MethodName: OnClick
+        m_MethodName: Clicou
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -603,17 +603,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1898752640}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &248623589
 MonoBehaviour:
@@ -664,7 +653,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3880aaba331c7c947beb5718d975f0fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  casa: {fileID: 248623588}
+  xisImage: {fileID: 1898752642}
   interagir: {fileID: 511333664}
   sortear: {fileID: 1653143945}
   tipoJogador: 2
@@ -1151,7 +1140,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 464097736}
-        m_MethodName: OnClick
+        m_MethodName: Clicou
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1160,17 +1149,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2085735688}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &464097734
 MonoBehaviour:
@@ -1221,7 +1199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3880aaba331c7c947beb5718d975f0fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  casa: {fileID: 464097733}
+  xisImage: {fileID: 2085735690}
   interagir: {fileID: 511333664}
   sortear: {fileID: 1653143945}
   tipoJogador: 2
@@ -1449,6 +1427,16 @@ MonoBehaviour:
   - {fileID: 1578205283}
   - {fileID: 1138062805}
   - {fileID: 812308773}
+  casasJogador:
+  - {fileID: 2009963103}
+  - {fileID: 464097736}
+  - {fileID: 741450560}
+  - {fileID: 2058107686}
+  - {fileID: 248623591}
+  - {fileID: 1131867480}
+  - {fileID: 1578205286}
+  - {fileID: 1138062808}
+  - {fileID: 812308776}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -2396,7 +2384,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 741450560}
-        m_MethodName: OnClick
+        m_MethodName: Clicou
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2405,17 +2393,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1014310446}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &741450558
 MonoBehaviour:
@@ -2466,7 +2443,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3880aaba331c7c947beb5718d975f0fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  casa: {fileID: 741450557}
+  xisImage: {fileID: 1014310448}
   interagir: {fileID: 511333664}
   sortear: {fileID: 1653143945}
   tipoJogador: 2
@@ -2775,7 +2752,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 812308776}
-        m_MethodName: OnClick
+        m_MethodName: Clicou
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2784,17 +2761,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1547048982}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &812308774
 MonoBehaviour:
@@ -2845,7 +2811,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3880aaba331c7c947beb5718d975f0fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  casa: {fileID: 812308773}
+  xisImage: {fileID: 1547048984}
   interagir: {fileID: 511333664}
   sortear: {fileID: 1653143945}
   tipoJogador: 2
@@ -3410,7 +3376,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1131867480}
-        m_MethodName: OnClick
+        m_MethodName: Clicou
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3419,17 +3385,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 707062918}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &1131867478
 MonoBehaviour:
@@ -3480,7 +3435,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3880aaba331c7c947beb5718d975f0fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  casa: {fileID: 1131867477}
+  xisImage: {fileID: 707062920}
   interagir: {fileID: 511333664}
   sortear: {fileID: 1653143945}
   tipoJogador: 2
@@ -3623,7 +3578,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1138062808}
-        m_MethodName: OnClick
+        m_MethodName: Clicou
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3632,17 +3587,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 232824894}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &1138062806
 MonoBehaviour:
@@ -3693,7 +3637,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3880aaba331c7c947beb5718d975f0fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  casa: {fileID: 1138062805}
+  xisImage: {fileID: 232824896}
   interagir: {fileID: 511333664}
   sortear: {fileID: 1653143945}
   tipoJogador: 2
@@ -4785,7 +4729,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1578205286}
-        m_MethodName: OnClick
+        m_MethodName: Clicou
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4794,17 +4738,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1352822926}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &1578205284
 MonoBehaviour:
@@ -4855,7 +4788,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3880aaba331c7c947beb5718d975f0fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  casa: {fileID: 1578205283}
+  xisImage: {fileID: 1352822928}
   interagir: {fileID: 511333664}
   sortear: {fileID: 1653143945}
   tipoJogador: 2
@@ -5559,7 +5492,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2009963103}
-        m_MethodName: OnClick
+        m_MethodName: Clicou
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5568,17 +5501,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 853624113}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &2009963101
 MonoBehaviour:
@@ -5629,7 +5551,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3880aaba331c7c947beb5718d975f0fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  casa: {fileID: 2009963100}
+  xisImage: {fileID: 853624115}
   interagir: {fileID: 511333664}
   sortear: {fileID: 1653143945}
   tipoJogador: 2
@@ -5808,7 +5730,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2058107686}
-        m_MethodName: OnClick
+        m_MethodName: Clicou
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5817,17 +5739,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2026129711}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &2058107684
 MonoBehaviour:
@@ -5878,7 +5789,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3880aaba331c7c947beb5718d975f0fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  casa: {fileID: 2058107683}
+  xisImage: {fileID: 2026129713}
   interagir: {fileID: 511333664}
   sortear: {fileID: 1653143945}
   tipoJogador: 2
