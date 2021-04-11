@@ -38,14 +38,14 @@ public class ControleVolume : MonoBehaviour
     public void VolumeEfeitos(float volume)
     {
         volumeEfeitos = volume;
-        /*GameObject[] efeito = GameObject.FindGameObjectsWithTag("Efeitos");
+        GameObject[] efeito = GameObject.FindGameObjectsWithTag("Efeitos");
         if (efeito.Length > 0)
         {
             for (int i = 0; i < efeito.Length; i++)
             {
                 efeito[i].GetComponent<AudioSource>().volume = volumeEfeitos;
             }
-        }*/
+        }
 
         PlayerPrefs.SetFloat("Efeitos", volumeEfeitos);
     }

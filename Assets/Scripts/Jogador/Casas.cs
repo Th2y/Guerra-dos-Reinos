@@ -16,12 +16,10 @@ public class Casas : MonoBehaviour
     private Habilidades habilidades;
 
     public TipoJogador tipoJogador;
-    public static TipoJogador tipos;
 
-    private void Awake()
+    private void Start()
     {
         this.tipoJogador = TipoJogador.Nenhum;
-        tipos = tipoJogador;
     }
 
     public void Clicou()
@@ -35,16 +33,21 @@ public class Casas : MonoBehaviour
             sortear.SorteioIA();
         }
         else UsarHabilidade();
+
+        for (int i = 0; i < habilidades.casasJogador.Length; i++)
+        {
+            if (habilidades.casasJogador[i].tipoJogador == TipoJogador.Bloqueado)
+                habilidades.casasJogador[i].tipoJogador = TipoJogador.Nenhum;
+        }
     }
     public void UsarHabilidade()
     {
         if (habilidades.tipoHabilidade == "bloquear")
         {
-            Debug.Log("Bloqueando...");
+            this.tipoJogador = TipoJogador.Bloqueado;
         }
         else if (habilidades.tipoHabilidade == "mudar")
         {
-            Debug.Log("Mudando...");
             bolaImage.gameObject.SetActive(false);
             xisImage.gameObject.SetActive(true);
             this.tipoJogador = TipoJogador.Xis;
@@ -54,10 +57,16 @@ public class Casas : MonoBehaviour
         }
         else if (habilidades.tipoHabilidade == "retirar")
         {
-            //Falta proibir que o jogador possa jogar na casa que ele acabou de retirar a peça
-            Debug.Log("Retirando...");
             bolaImage.gameObject.SetActive(false);
-            this.tipoJogador = TipoJogador.Nenhum;
+            this.tipoJogador = TipoJogador.Bloqueado;
+
+            for (int i = 0; i < habilidades.casas.Length; i++)
+            {
+                if (habilidades.casasJogador[i].tipoJogador != TipoJogador.Nenhum)
+                    habilidades.casas[i].interactable = false;
+                else
+                    habilidades.casas[i].interactable = true;
+            }
         }
         habilidades.usandoHabilidade = false;
     }

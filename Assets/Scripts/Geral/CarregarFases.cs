@@ -1,6 +1,8 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 public class CarregarFases : MonoBehaviour
 {
@@ -11,6 +13,10 @@ public class CarregarFases : MonoBehaviour
     private Button[] faseAtual;
     private int numFaseAtual = 0;
     private string nomeDaFase;
+
+    [SerializeField]
+    private TextMeshProUGUI progressoText;
+    private int progresso = 0;
 
     private void Start()
     {
@@ -34,18 +40,37 @@ public class CarregarFases : MonoBehaviour
     public void EscolherFase(int fase)
     {
         if (PlayerPrefs.GetInt("Vidas") > 0)
-            SceneManager.LoadScene("Fase" + fase);
+            StartCoroutine(CenaDeCarregamento("Fase" + fase));
         else
             comprarVidas.SetActive(true);
     }
 
     public void VoltarASelecao()
     {
-        SceneManager.LoadScene("Fases");
+        StartCoroutine(CenaDeCarregamento("Fases"));
     }
 
     public void Reiniciar()
     {
-        SceneManager.LoadScene(nomeDaFase);
+        StartCoroutine(CenaDeCarregamento(nomeDaFase));
+    }
+
+    IEnumerator CenaDeCarregamento(string cena)
+    {
+        progressoText.gameObject.SetActive(true);
+
+        AsyncOperation carregamento = SceneManager.LoadSceneAsync(cena);
+        carregamento.allowSceneActivation = false;
+        while (progresso < 89)
+        {
+            progresso = (int)(carregamento.progress * 100.0f);
+            progressoText.text = "Carregando... " + progresso + "%";
+            yield return null;
+        }
+        progresso = 100;
+        progressoText.text = "Carregando... " + progresso + "%";
+        //yield return new WaitForSeconds(2);
+        progressoText.gameObject.SetActive(false);
+        carregamento.allowSceneActivation = true;
     }
 }

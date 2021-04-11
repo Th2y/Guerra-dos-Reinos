@@ -15,7 +15,7 @@ public class Sortear : MonoBehaviour
     [SerializeField]
     private Button[] casas;
     [SerializeField]
-    private TextMeshProUGUI[] vez;
+    private GameObject[] vez;
 
     [SerializeField]
     private Tabuleiro tabuleiro;

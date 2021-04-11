@@ -2,5 +2,6 @@
 {
     Xis,
     Bola,
-    Nenhum
+    Nenhum,
+    Bloqueado
 }
