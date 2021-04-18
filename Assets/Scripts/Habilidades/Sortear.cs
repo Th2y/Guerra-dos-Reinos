@@ -7,11 +7,9 @@ public class Sortear : MonoBehaviour
     //Botões
     public Button[] sortear;
     [SerializeField]
-    private Button[] bloquear;
+    private Button[] habJogador;
     [SerializeField]
-    private Button[] mudar;
-    [SerializeField]
-    private Button[] retirar;
+    private Button[] habIA;
     [SerializeField]
     private Button[] casas;
     [SerializeField]
@@ -23,9 +21,24 @@ public class Sortear : MonoBehaviour
     private Interagir interagir;
     [SerializeField]
     private Inimigo inimigo;
+    [SerializeField]
+    private Animator btnSorteioIA;
 
     private int i = 0;
+    [SerializeField]
+    private int chanceNadaJogador = 2;
+    [SerializeField]
+    private int chanceNadaIA = 0;
+    [SerializeField]
+    private int dificuldade = 1;
     public bool vezJogador = true;
+    public bool esperarSorteio = false;
+
+    private void Start()
+    {
+        chanceNadaIA += dificuldade;
+        chanceNadaJogador += dificuldade;
+    }
 
     public void PassarVez()
     {
@@ -42,9 +55,10 @@ public class Sortear : MonoBehaviour
             vez[0].gameObject.SetActive(false);
             vezJogador = false;
 
-            bloquear[0].interactable = false;
-            mudar[0].interactable = false;
-            retirar[0].interactable = false;
+            for(int i = 0; i < habJogador.Length; i++)
+            {
+                habJogador[i].interactable = false;
+            }
         }
         else
         {
@@ -52,60 +66,51 @@ public class Sortear : MonoBehaviour
             vez[1].gameObject.SetActive(false);
             vezJogador = true;
 
-            bloquear[1].interactable = false;
-            mudar[1].interactable = false;
-            retirar[1].interactable = false;
+            for (int i = 0; i < habIA.Length; i++)
+            {
+                habIA[i].interactable = false;
+            }
         }
+    }
+
+    public void SortearNum()
+    {
+        esperarSorteio = true;
+
+        if (!vezJogador)
+        {
+            i = Random.Range(0, habIA.Length + chanceNadaIA);
+            btnSorteioIA.Play("Sortear");
+        }
+        else
+            i = Random.Range(0, habJogador.Length + chanceNadaJogador);
     }
 
     public void Sorteio()
     {
-        i = Random.Range(1, 6);
+        esperarSorteio = false;
         interagir.Bloquear(true);
 
         if (i == 2)
-        {
-            //Debug.Log("bloquear");
-            bloquear[0].interactable = true;
-        }
+            habJogador[0].interactable = true;
         else if (i == 4)
-        {
-            // Debug.Log("mudar");
-            mudar[0].interactable = true;
-        }
+            habJogador[1].interactable = true;
         else if (i == 6)
-        {
-            //Debug.Log("retirar");
-            retirar[0].interactable = true;
-        }
-        //else
-        //Debug.Log("nada");
+            habJogador[2].interactable = true;
 
         sortear[0].interactable = false;
     }
 
     public void SorteioIA()
     {
-        i = Random.Range(1, 6);
+        esperarSorteio = false;
 
         if (i == 2)
-        {
-            //Debug.Log(i + " bloquear inimigo");
-            bloquear[1].interactable = true;
-        }
+            habIA[0].interactable = true;
         else if (i == 4)
-        {
-            //Debug.Log(i + " mudar inimigo");
-            mudar[1].interactable = true;
-        }
+            habIA[1].interactable = true;
         else if (i == 6)
-        {
-            //Debug.Log(i + " retirar inimigo");
-            retirar[1].interactable = true;
-        }
-        //else
-        //Debug.Log(i + " nada inimigo");
-
+            habIA[2].interactable = true;
 
         sortear[1].interactable = false;
         inimigo.Jogada();

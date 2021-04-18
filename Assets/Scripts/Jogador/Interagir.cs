@@ -10,6 +10,11 @@ public class Interagir : MonoBehaviour
 
     private void Start()
     {
+        for (int i = 0; i < casas.Length; i++)
+        {
+            casasJogador[i].numCasa = i;
+        }
+
         Bloquear(true);
     }
 

@@ -4,13 +4,12 @@
 public class Combinacoes
 {
     // Lista de casas que formam uma combinação
-    [SerializeField]
-    private Casas[] casas;
+    public Casas[] casas;
 
     public bool EstaCompleta()
     {
         TipoJogador tipoJogador = this.casas[0].TipoJogador;
-        if (tipoJogador != TipoJogador.Nenhum)
+        if (tipoJogador != TipoJogador.Nenhum && tipoJogador != TipoJogador.Bloqueado)
         {
             foreach (Casas casas in this.casas)
             {

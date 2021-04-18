@@ -37,6 +37,16 @@ public class CarregarFases : MonoBehaviour
             faseAtual[numFaseAtual].transform.localScale = new Vector3(1.2f, 1.2f, 1);
     }
 
+    public void EscolherFaseBonus5x5(int fase)
+    {
+        StartCoroutine(CenaDeCarregamento("FaseBonus5x5-" + fase));
+    }
+
+    public void EscolherFaseBonus8x8(int fase)
+    {
+        StartCoroutine(CenaDeCarregamento("FaseBonus8x8-" + fase));
+    }
+
     public void EscolherFase(int fase)
     {
         if (PlayerPrefs.GetInt("Vidas") > 0)

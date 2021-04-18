@@ -3,6 +3,8 @@ using UnityEngine.UI;
 
 public class Casas : MonoBehaviour
 {
+    public int numCasa = 0;
+
     [SerializeField]
     private Image xisImage;
     [SerializeField]
@@ -30,7 +32,7 @@ public class Casas : MonoBehaviour
             this.tipoJogador = TipoJogador.Xis;
             sortear.PassarVez();
             interagir.Bloquear(false);
-            sortear.SorteioIA();
+            sortear.SortearNum();
         }
         else UsarHabilidade();
 
@@ -53,7 +55,7 @@ public class Casas : MonoBehaviour
             this.tipoJogador = TipoJogador.Xis;
             sortear.PassarVez();
             interagir.Bloquear(false);
-            sortear.SorteioIA();
+            sortear.SortearNum();
         }
         else if (habilidades.tipoHabilidade == "retirar")
         {

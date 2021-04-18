@@ -12,36 +12,38 @@ public class Tabuleiro : MonoBehaviour
     private bool jaTerminou = false;
 
     // Lista de combinações possíveis para ganhar o jogo
-    [SerializeField]
-    private Combinacoes[] combinacoes;
+    public Combinacoes[] combinacoes;
     [SerializeField]
     private Vidas vidas;
 
-    public void Update()
+    private void Update()
     {
-        TipoJogador jogadorVencedor = ObterVencedor();
-        if (jogadorVencedor != TipoJogador.Nenhum)
+        if (!jaTerminou)
         {
-            painelVencedor.SetActive(true);
+            TipoJogador jogadorVencedor = ObterVencedor();
 
-            if(jogadorVencedor == TipoJogador.Bola && !jaTerminou)
+            if (jogadorVencedor != TipoJogador.Nenhum)
             {
-                vencedor.text = "O reino das " + jogadorVencedor.ToString() + " venceu a partida!";
-                vidas.PerderVida();
+                painelVencedor.SetActive(true);
+
+                if (jogadorVencedor == TipoJogador.Bola)
+                {
+                    vencedor.text = "O reino das Bolas venceu a partida!";
+                    vidas.PerderVida();
+                }
+                else if (jogadorVencedor == TipoJogador.Xis)
+                    vencedor.text = "O reino dos Xis venceu a partida!";
+
                 jaTerminou = true;
+                Time.timeScale = 0f;
             }
-            else if(jogadorVencedor == TipoJogador.Xis && !jaTerminou)
+            else if (jogadas == 9)
             {
-                vencedor.text = "O reino dos " + jogadorVencedor.ToString() + " venceu a partida!";
-                jaTerminou = true;
-            }
-            else if(jogadas == 9 && !jaTerminou)
-            {
+                painelVencedor.SetActive(true);
                 vencedor.text = "O reino das Bolas e dos Xis chegaram a um acordo e empataram a partida!";
                 jaTerminou = true;
+                Time.timeScale = 0f;
             }
-
-            Time.timeScale = 0f;
         }
     }
 
