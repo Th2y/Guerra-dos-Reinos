@@ -17,4 +17,10 @@ public class Retirar : MonoBehaviour
                 habilidades.casas[i].interactable = true;
         }
     }
+
+    public void IARetira()
+    {
+        habilidades.usandoHabilidade = true;
+        habilidades.tipoHabilidade = "retirar";
+    }
 }

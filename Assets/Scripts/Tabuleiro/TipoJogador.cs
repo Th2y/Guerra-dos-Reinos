@@ -3,5 +3,6 @@
     Xis,
     Bola,
     Nenhum,
-    Bloqueado
+    BloqueadoPeloJog,
+    BloqueadoPelaIA
 }

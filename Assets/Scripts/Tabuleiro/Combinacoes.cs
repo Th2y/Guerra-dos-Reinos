@@ -9,7 +9,7 @@ public class Combinacoes
     public bool EstaCompleta()
     {
         TipoJogador tipoJogador = this.casas[0].TipoJogador;
-        if (tipoJogador != TipoJogador.Nenhum && tipoJogador != TipoJogador.Bloqueado)
+        if (tipoJogador != TipoJogador.Nenhum && tipoJogador != TipoJogador.BloqueadoPeloJog && tipoJogador != TipoJogador.BloqueadoPelaIA)
         {
             foreach (Casas casas in this.casas)
             {

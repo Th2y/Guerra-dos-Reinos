@@ -8,6 +8,8 @@ public class Tabuleiro : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI vencedor;
 
+    public int maxJogadas = 9;
+    public bool jogadorDeX = true;
     public int jogadas = 0;
     private bool jaTerminou = false;
 

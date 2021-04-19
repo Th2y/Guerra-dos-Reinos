@@ -40,6 +40,11 @@ public class Sortear : MonoBehaviour
         chanceNadaJogador += dificuldade;
     }
 
+    public void DiminuirJogadas()
+    {
+        tabuleiro.jogadas--;
+    }
+
     public void PassarVez()
     {
         PassouVez();
@@ -91,11 +96,14 @@ public class Sortear : MonoBehaviour
         esperarSorteio = false;
         interagir.Bloquear(true);
 
-        if (i == 2)
-            habJogador[0].interactable = true;
-        else if (i == 4)
+        if (i == 0)
+        {
+            if ((tabuleiro.jogadorDeX && tabuleiro.jogadas < 9) || (!tabuleiro.jogadorDeX && tabuleiro.jogadas < 8))
+                habJogador[0].interactable = true;
+        }
+        else if (i == 1)
             habJogador[1].interactable = true;
-        else if (i == 6)
+        else if (i == 2)
             habJogador[2].interactable = true;
 
         sortear[0].interactable = false;
@@ -105,14 +113,17 @@ public class Sortear : MonoBehaviour
     {
         esperarSorteio = false;
 
-        if (i == 2)
-            habIA[0].interactable = true;
-        else if (i == 4)
+        if (i == 0)
+        {
+            if((tabuleiro.jogadorDeX && tabuleiro.jogadas < 8) || (!tabuleiro.jogadorDeX && tabuleiro.jogadas < 9))
+                habIA[0].interactable = true;
+        }
+        else if (i == 1)
             habIA[1].interactable = true;
-        else if (i == 6)
+        else if (i == 2)
             habIA[2].interactable = true;
 
         sortear[1].interactable = false;
-        inimigo.Jogada();
+        inimigo.Jogar();
     }
 }

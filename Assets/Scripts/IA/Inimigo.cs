@@ -14,7 +14,7 @@ public class Inimigo : MonoBehaviour
 
     public void Jogar()
     {
-        if (tabuleiro.jogadas != 9)
+        if (tabuleiro.jogadas != tabuleiro.maxJogadas)
         {
             //Verificar se existe alguma possibilidade de vencer
             if (Verificar(TipoJogador.Bola))

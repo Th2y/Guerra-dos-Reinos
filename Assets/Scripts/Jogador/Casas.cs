@@ -26,6 +26,12 @@ public class Casas : MonoBehaviour
 
     public void Clicou()
     {
+        for (int i = 0; i < habilidades.casasJogador.Length; i++)
+        {
+            if (habilidades.casasJogador[i].tipoJogador == TipoJogador.BloqueadoPeloJog)
+                habilidades.casasJogador[i].tipoJogador = TipoJogador.Nenhum;
+        }
+
         if (!habilidades.usandoHabilidade || this.tipoJogador == TipoJogador.Nenhum)
         {
             xisImage.gameObject.SetActive(true);
@@ -35,18 +41,12 @@ public class Casas : MonoBehaviour
             sortear.SortearNum();
         }
         else UsarHabilidade();
-
-        for (int i = 0; i < habilidades.casasJogador.Length; i++)
-        {
-            if (habilidades.casasJogador[i].tipoJogador == TipoJogador.Bloqueado)
-                habilidades.casasJogador[i].tipoJogador = TipoJogador.Nenhum;
-        }
     }
     public void UsarHabilidade()
     {
         if (habilidades.tipoHabilidade == "bloquear")
         {
-            this.tipoJogador = TipoJogador.Bloqueado;
+            this.tipoJogador = TipoJogador.BloqueadoPeloJog;
         }
         else if (habilidades.tipoHabilidade == "mudar")
         {
@@ -60,7 +60,8 @@ public class Casas : MonoBehaviour
         else if (habilidades.tipoHabilidade == "retirar")
         {
             bolaImage.gameObject.SetActive(false);
-            this.tipoJogador = TipoJogador.Bloqueado;
+            this.tipoJogador = TipoJogador.BloqueadoPelaIA;
+            sortear.DiminuirJogadas();
 
             for (int i = 0; i < habilidades.casas.Length; i++)
             {

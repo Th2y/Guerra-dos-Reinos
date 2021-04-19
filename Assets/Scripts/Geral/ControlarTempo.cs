@@ -10,14 +10,19 @@ public class ControlarTempo : MonoBehaviour
     private Sortear sortear;
     private float tempoSorteio = 1f;
 
+    private float tempoDecorrido = 0f;
+
     void Update()
     {
+        if (sortear.vezJogador)
+            tempoDecorrido += Time.deltaTime;
+
         if (inimigo.iniciarJogada)
         {
             tempoEspera -= Time.deltaTime;
             if (tempoEspera <= 0)
             {
-                inimigo.Jogar();
+                sortear.SortearNum();
                 tempoEspera = 2f;
             }
         }

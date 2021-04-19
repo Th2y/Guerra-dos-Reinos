@@ -22,7 +22,7 @@ public class CasasInimigo : MonoBehaviour
 
         for (int i = 0; i < habilidades.casasJogador.Length; i++)
         {
-            if (habilidades.casasJogador[i].tipoJogador == TipoJogador.Bloqueado)
+            if (habilidades.casasJogador[i].tipoJogador == TipoJogador.BloqueadoPeloJog)
                 habilidades.casasJogador[i].tipoJogador = TipoJogador.Nenhum;
         }
     }
