@@ -34,8 +34,16 @@ public class Casas : MonoBehaviour
 
         if (!habilidades.usandoHabilidade || this.tipoJogador == TipoJogador.Nenhum)
         {
-            xisImage.gameObject.SetActive(true);
-            this.tipoJogador = TipoJogador.Xis;
+            if (sortear.tabuleiro.jogadorDeX)
+            {
+                xisImage.gameObject.SetActive(true);
+                this.tipoJogador = TipoJogador.Xis;
+            }
+            else
+            {
+                bolaImage.gameObject.SetActive(true);
+                this.tipoJogador = TipoJogador.Bola;
+            }
             sortear.PassarVez();
             interagir.Bloquear(false);
             sortear.SortearNum();
@@ -50,16 +58,29 @@ public class Casas : MonoBehaviour
         }
         else if (habilidades.tipoHabilidade == "mudar")
         {
-            bolaImage.gameObject.SetActive(false);
-            xisImage.gameObject.SetActive(true);
-            this.tipoJogador = TipoJogador.Xis;
+            if (sortear.tabuleiro.jogadorDeX)
+            {
+                bolaImage.gameObject.SetActive(false);
+                xisImage.gameObject.SetActive(true);
+                this.tipoJogador = TipoJogador.Xis;
+            }
+            else
+            {
+                bolaImage.gameObject.SetActive(true);
+                xisImage.gameObject.SetActive(false);
+                this.tipoJogador = TipoJogador.Bola;
+            }
             sortear.PassarVez();
             interagir.Bloquear(false);
             sortear.SortearNum();
         }
         else if (habilidades.tipoHabilidade == "retirar")
         {
-            bolaImage.gameObject.SetActive(false);
+            if (sortear.tabuleiro.jogadorDeX)
+                bolaImage.gameObject.SetActive(false);
+            else
+                xisImage.gameObject.SetActive(false);
+
             this.tipoJogador = TipoJogador.BloqueadoPelaIA;
             sortear.DiminuirJogadas();
 

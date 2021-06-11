@@ -16,23 +16,46 @@ public class Inimigo : MonoBehaviour
     {
         if (tabuleiro.jogadas != tabuleiro.maxJogadas)
         {
-            //Verificar se existe alguma possibilidade de vencer
-            if (Verificar(TipoJogador.Bola))
+            if (tabuleiro.jogadorDeX)
             {
-                casas[casaJogar].Jogar();
-                iniciarJogada = false;
-            }
+                //Verificar se existe alguma possibilidade de vencer
+                if (Verificar(TipoJogador.Bola))
+                {
+                    casas[casaJogar].Jogar();
+                    iniciarJogada = false;
+                }
 
-            //Verificar se existe alguma possibilidade de perder
-            else if (Verificar(TipoJogador.Xis))
-            {
-                casas[casaJogar].Jogar();
-                iniciarJogada = false;
-            }
+                //Verificar se existe alguma possibilidade de perder
+                else if (Verificar(TipoJogador.Xis))
+                {
+                    casas[casaJogar].Jogar();
+                    iniciarJogada = false;
+                }
 
-            //Fazer uma jogada aleatória em qualquer casa vazia
+                //Fazer uma jogada aleatória em qualquer casa vazia
+                else
+                    JogadaAleatoria();
+            }
             else
-                JogadaAleatoria();
+            {
+                //Verificar se existe alguma possibilidade de vencer
+                if (Verificar(TipoJogador.Xis))
+                {
+                    casas[casaJogar].Jogar();
+                    iniciarJogada = false;
+                }
+
+                //Verificar se existe alguma possibilidade de perder
+                else if (Verificar(TipoJogador.Bola))
+                {
+                    casas[casaJogar].Jogar();
+                    iniciarJogada = false;
+                }
+
+                //Fazer uma jogada aleatória em qualquer casa vazia
+                else
+                    JogadaAleatoria();
+            }
         }
     }
 

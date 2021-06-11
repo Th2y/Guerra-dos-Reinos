@@ -34,21 +34,27 @@ public class CarregarFases : MonoBehaviour
             PlayerPrefs.SetInt("ProxFase", numFaseAtual);
 
         if (faseAtual[numFaseAtual] != null)
+        {
             faseAtual[numFaseAtual].transform.localScale = new Vector3(1.2f, 1.2f, 1);
+        }
     }
 
     public void EscolherFaseBonus5x5(int fase)
     {
+        Time.timeScale = 1f;
         StartCoroutine(CenaDeCarregamento("FaseBonus5x5-" + fase));
     }
 
     public void EscolherFaseBonus8x8(int fase)
     {
+        Time.timeScale = 1f;
         StartCoroutine(CenaDeCarregamento("FaseBonus8x8-" + fase));
     }
 
     public void EscolherFase(int fase)
     {
+        Time.timeScale = 1f;
+
         if (PlayerPrefs.GetInt("Vidas") > 0)
             StartCoroutine(CenaDeCarregamento("Fase" + fase));
         else
@@ -57,11 +63,13 @@ public class CarregarFases : MonoBehaviour
 
     public void VoltarASelecao()
     {
+        Time.timeScale = 1f;
         StartCoroutine(CenaDeCarregamento("Fases"));
     }
 
     public void Reiniciar()
     {
+        Time.timeScale = 1f;
         StartCoroutine(CenaDeCarregamento(nomeDaFase));
     }
 
@@ -79,7 +87,7 @@ public class CarregarFases : MonoBehaviour
         }
         progresso = 100;
         progressoText.text = "Carregando... " + progresso + "%";
-        //yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(2);
         progressoText.gameObject.SetActive(false);
         carregamento.allowSceneActivation = true;
     }

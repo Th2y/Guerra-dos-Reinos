@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Vidas : MonoBehaviour
 {
-    public int vidas = 3;
+    private int vidas = 5;
     private string nomeDaCena;
 
     [SerializeField]
