@@ -32,7 +32,7 @@ public class Casas : MonoBehaviour
                 habilidades.casasJogador[i].tipoJogador = TipoJogador.Nenhum;
         }
 
-        if (!habilidades.usandoHabilidade || this.tipoJogador == TipoJogador.Nenhum)
+        if (!habilidades.usandoHabilidade || (habilidades.tipoHabilidade != "bloquear" && this.tipoJogador == TipoJogador.Nenhum))
         {
             if (sortear.tabuleiro.jogadorDeX)
             {
@@ -93,6 +93,10 @@ public class Casas : MonoBehaviour
             }
         }
         habilidades.usandoHabilidade = false;
+        for(int i = 0; i < sortear.habJogador.Length; i++)
+        {
+            sortear.habJogador[i].interactable = false;
+        }
     }
 
     public TipoJogador TipoJogador

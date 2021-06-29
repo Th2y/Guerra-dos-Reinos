@@ -33,10 +33,11 @@ public class CarregarFases : MonoBehaviour
         else
             PlayerPrefs.SetInt("ProxFase", numFaseAtual);
 
-        if (faseAtual[numFaseAtual] != null)
+        faseAtual[numFaseAtual].transform.localScale = new Vector3(1.2f, 1.2f, 1);
+        for(int i = 0; i <= numFaseAtual; i++)
         {
-            faseAtual[numFaseAtual].transform.localScale = new Vector3(1.2f, 1.2f, 1);
-        }
+            faseAtual[i].interactable = true;
+        }            
     }
 
     public void EscolherFaseBonus5x5(int fase)

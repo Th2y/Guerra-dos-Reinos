@@ -6,18 +6,19 @@ public class Estrelas_e_Moedas : MonoBehaviour
 {
     //Variaveis
     [Header("Variaveis")]
-
     private int numMoedas;
+    private string nomeDaCena;
+    private string[] nomeDaCenaSplit;
+    private int numFaseAtual;
+    public EnumDificuldade dificuldade = EnumDificuldade.facil;
 
     //Moedas
     [Header ("Moedas")]
-
     [SerializeField]
     private TextMeshProUGUI textMoedas;
 
     //Estrelas de fases normais
     [Header("Estrelas de fases normais")]
-
     [SerializeField]
     private GameObject[] umaEstrela;
     [SerializeField]
@@ -27,7 +28,6 @@ public class Estrelas_e_Moedas : MonoBehaviour
 
     //Estrelas de fases 5x5
     [Header("Estrelas de fases 5x5")]
-
     [SerializeField]
     private GameObject[] umaEstrela5x5;
     [SerializeField]
@@ -37,7 +37,6 @@ public class Estrelas_e_Moedas : MonoBehaviour
 
     //Estrelas de fases 8x8
     [Header("Estrelas de fases 8x8")]
-
     [SerializeField]
     private GameObject[] umaEstrela8x8;
     [SerializeField]
@@ -47,15 +46,20 @@ public class Estrelas_e_Moedas : MonoBehaviour
 
     //Estrelas em cada fase
     [Header("Estrelas em cada fase")]
-
     [SerializeField]
-    private GameObject[] estrelasFase;
-    public EnumDificuldade dificuldade = EnumDificuldade.facil;
+    private GameObject[] estrelasFase;    
 
     private void Start()
     {
-        if (SceneManager.GetActiveScene().name == "Fases")
+        nomeDaCena = SceneManager.GetActiveScene().name;
+
+        if (nomeDaCena == "Fases")
             ChamarNumMenu();
+        else
+        {
+            nomeDaCenaSplit = nomeDaCena.Split('e');
+            numFaseAtual = int.Parse(nomeDaCenaSplit[1]);
+        }
     }
 
     private void ChamarNumMenu()
@@ -175,10 +179,21 @@ public class Estrelas_e_Moedas : MonoBehaviour
         }
     }
 
-    public void DefinirEstrelasEMoedas(int num)
+    public void DefinirEstrelasEMoedas(int num, bool venceu)
     {
         DefinirEstrelas(num);
         DefinirMoedas(num);
+        DefinirProxFase(venceu);
+    }
+
+    private void DefinirProxFase(bool venceu)
+    {
+        int proxFase = PlayerPrefs.GetInt("ProxFase");
+        if (venceu && numFaseAtual > proxFase)
+        {
+            PlayerPrefs.SetInt("ProxFase", numFaseAtual);
+            Debug.Log("Salvei a prox fase");
+        }
     }
 
     private void DefinirEstrelas(int num)

@@ -23,6 +23,7 @@ public class Tabuleiro : MonoBehaviour
     public int maxJogadas = 9;
     public int jogadas = 0;
     public bool jogadorDeX = true;
+    private bool jogadorVenceu = false;
 
     private TipoJogador jogadorAtual;
     private bool jaTerminou = false;
@@ -43,7 +44,6 @@ public class Tabuleiro : MonoBehaviour
 
     private void Start()
     {
-        PlayerPrefs.DeleteAll();
         nomeDaCena = SceneManager.GetActiveScene().name;
         Time.timeScale = 1f;
 
@@ -55,9 +55,6 @@ public class Tabuleiro : MonoBehaviour
 
     private void Update()
     {
-        if (Time.timeScale == 0f)
-            Debug.Log(Time.timeScale);
-
         if (sortear.vezJogador && !jaTerminou)
             tempoDecorrido += Time.deltaTime;
 
@@ -113,6 +110,8 @@ public class Tabuleiro : MonoBehaviour
     {
         if (jogadorVencedor == jogadorAtual)
         {
+            jogadorVenceu = true;
+
             if (estrelas_E_Moedas.dificuldade == EnumDificuldade.facil)
             {
                 if (tempoDecorrido <= 140f)
@@ -166,7 +165,7 @@ public class Tabuleiro : MonoBehaviour
         if (numEstrelas > PlayerPrefs.GetInt("Estrelas" + nomeDaCena))
             PlayerPrefs.SetInt("Estrelas" + nomeDaCena, numEstrelas);
 
-        estrelas_E_Moedas.DefinirEstrelasEMoedas(numEstrelas);
+        estrelas_E_Moedas.DefinirEstrelasEMoedas(numEstrelas, jogadorVenceu);
     }
 
     public TipoJogador ObterVencedor()

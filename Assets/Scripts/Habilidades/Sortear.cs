@@ -6,8 +6,7 @@ public class Sortear : MonoBehaviour
 {
     //Botões
     public Button[] sortear;
-    [SerializeField]
-    private Button[] habJogador;
+    public Button[] habJogador;
     [SerializeField]
     private Button[] habIA;
     [SerializeField]
@@ -24,8 +23,8 @@ public class Sortear : MonoBehaviour
     private Animator btnSorteioIA;
 
     private int i = 0;
-    private int chanceNadaJogador = 2;
-    private int chanceNadaIA = 0;
+    private int chanceNadaJogador = 0;
+    private int chanceNadaIA = 2;
     [SerializeField]
     private int dificuldade = 1;
     public bool vezJogador = true;
