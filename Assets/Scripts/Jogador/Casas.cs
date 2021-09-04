@@ -96,6 +96,7 @@ public class Casas : MonoBehaviour
         for(int i = 0; i < sortear.habJogador.Length; i++)
         {
             sortear.habJogador[i].interactable = false;
+            sortear.habJogador[i].gameObject.SetActive(false);
         }
     }
 

@@ -68,6 +68,7 @@ public class Sortear : MonoBehaviour
             for(int i = 0; i < habJogador.Length; i++)
             {
                 habJogador[i].interactable = false;
+                habJogador[i].gameObject.SetActive(false);
             }
         }
         else
@@ -104,14 +105,25 @@ public class Sortear : MonoBehaviour
         if (i == 0)
         {
             if ((tabuleiro.jogadorDeX && tabuleiro.jogadas < 9) || (!tabuleiro.jogadorDeX && tabuleiro.jogadas < 8))
+            {
                 habJogador[0].interactable = true;
+                habJogador[0].gameObject.SetActive(true);
+            }
+                
         }
         else if (i == 1)
+        {
             habJogador[1].interactable = true;
+            habJogador[1].gameObject.SetActive(true);
+        }            
         else if (i == 2)
+        {
             habJogador[2].interactable = true;
+            habJogador[2].gameObject.SetActive(true);
+        }
 
         sortear[0].interactable = false;
+        sortear[0].gameObject.SetActive(false);
     }
 
     public void SorteioIA()

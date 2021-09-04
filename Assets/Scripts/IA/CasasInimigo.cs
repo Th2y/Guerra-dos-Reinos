@@ -29,6 +29,7 @@ public class CasasInimigo : MonoBehaviour
         }
         sortear.PassarVez();
         sortear.sortear[0].interactable = true;
+        sortear.sortear[0].gameObject.SetActive(true);
 
         for (int i = 0; i < habilidades.casasJogador.Length; i++)
         {

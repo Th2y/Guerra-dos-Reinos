@@ -17,32 +17,14 @@ public class Estrelas_e_Moedas : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI textMoedas;
 
-    //Estrelas de fases normais
-    [Header("Estrelas de fases normais")]
+    //Fases normais
+    [Header("Fases")]
     [SerializeField]
-    private GameObject[] umaEstrela;
+    private NumEstrelasMenu[] fasesNormais;
     [SerializeField]
-    private GameObject[] duasEstrelas;
+    private NumEstrelasMenu[] fases5x5;
     [SerializeField]
-    private GameObject[] tresEstrelas;
-
-    //Estrelas de fases 5x5
-    [Header("Estrelas de fases 5x5")]
-    [SerializeField]
-    private GameObject[] umaEstrela5x5;
-    [SerializeField]
-    private GameObject[] duasEstrelas5x5;
-    [SerializeField]
-    private GameObject[] tresEstrelas5x5;
-
-    //Estrelas de fases 8x8
-    [Header("Estrelas de fases 8x8")]
-    [SerializeField]
-    private GameObject[] umaEstrela8x8;
-    [SerializeField]
-    private GameObject[] duasEstrelas8x8;
-    [SerializeField]
-    private GameObject[] tresEstrelas8x8;
+    private NumEstrelasMenu[] fases8x8;
 
     //Estrelas em cada fase
     [Header("Estrelas em cada fase")]
@@ -73,51 +55,37 @@ public class Estrelas_e_Moedas : MonoBehaviour
 
     private void NumEstrelas()
     {
-        for (int i = 1; i < umaEstrela.Length + 1; i++)
+        for (int i = 0; i < fasesNormais.Length; i++)
         {
-            int j = i - 1;
-            if (PlayerPrefs.HasKey("EstrelasFase" + i))
+            int j = i + 1;
+            if (PlayerPrefs.HasKey("EstrelasFase" + j))
             {
-                if (PlayerPrefs.GetInt("EstrelasFase" + i) == 1)
-                    umaEstrela[j].SetActive(true);
-                else if (PlayerPrefs.GetInt("EstrelasFase" + i) == 2)
-                {
-                    umaEstrela[j].SetActive(true);
-                    duasEstrelas[j].SetActive(true);
-                }
-                else if (PlayerPrefs.GetInt("EstrelasFase" + i) == 3)
-                {
-                    umaEstrela[j].SetActive(true);
-                    duasEstrelas[j].SetActive(true);
-                    tresEstrelas[j].SetActive(true);
-                }
-                else if (PlayerPrefs.GetInt("EstrelasFase" + i) > 3)
-                    PlayerPrefs.SetInt("EstrelasFase" + i, 3);
+                int num = PlayerPrefs.GetInt("EstrelasFase" + j);
+                if(num == 1 || num == 2 || num == 3)
+                    fasesNormais[i].ExibirEstrelas(num);
+                else if (PlayerPrefs.GetInt("EstrelasFase" + j) > 3)
+                    PlayerPrefs.SetInt("EstrelasFase" + j, 3);
+                else
+                    PlayerPrefs.SetInt("EstrelasFase" + j, 0);
             }
             else
-                PlayerPrefs.SetInt("EstrelasFase" + i, 0);
+                PlayerPrefs.SetInt("EstrelasFase" + j, 0);
         }
     }
 
+    //Corrigir depois
     private void NumEstrelas5x5()
     {
-        for (int i = 0; i < umaEstrela5x5.Length; i++)
+        for (int i = 0; i < fases5x5.Length; i++)
         {
             if (PlayerPrefs.HasKey("Estrelas5x5Fase" + i))
             {
                 if (PlayerPrefs.GetInt("Estrelas5x5Fase" + i) == 1)
-                    umaEstrela5x5[i].SetActive(true);
+                    fases5x5[i].ExibirEstrelas(0);
                 else if (PlayerPrefs.GetInt("Estrelas5x5Fase" + i) == 2)
-                {
-                    umaEstrela5x5[i].SetActive(true);
-                    duasEstrelas5x5[i].SetActive(true);
-                }
+                    fases5x5[i].ExibirEstrelas(1);
                 else if (PlayerPrefs.GetInt("Estrelas5x5Fase" + i) == 3)
-                {
-                    umaEstrela5x5[i].SetActive(true);
-                    duasEstrelas5x5[i].SetActive(true);
-                    tresEstrelas5x5[i].SetActive(true);
-                }
+                    fases5x5[i].ExibirEstrelas(2);
                 else if (PlayerPrefs.GetInt("Estrelas5x5Fase" + i) > 3)
                     PlayerPrefs.SetInt("Estrelas5x5Fase" + i, 3);
             }
@@ -126,25 +94,19 @@ public class Estrelas_e_Moedas : MonoBehaviour
         }
     }
 
+    //Corrigir depois
     private void NumEstrelas8x8()
     {
-        for (int i = 0; i < umaEstrela8x8.Length; i++)
+        for (int i = 0; i < fases8x8.Length; i++)
         {
             if (PlayerPrefs.HasKey("Estrelas8x8Fase" + i))
             {
                 if (PlayerPrefs.GetInt("Estrelas8x8Fase" + i) == 1)
-                    umaEstrela8x8[i].SetActive(true);
+                    fases8x8[i].ExibirEstrelas(0);
                 else if (PlayerPrefs.GetInt("Estrelas8x8Fase" + i) == 2)
-                {
-                    umaEstrela8x8[i].SetActive(true);
-                    duasEstrelas8x8[i].SetActive(true);
-                }
+                    fases8x8[i].ExibirEstrelas(1);
                 else if (PlayerPrefs.GetInt("Estrelas8x8Fase" + i) == 3)
-                {
-                    umaEstrela8x8[i].SetActive(true);
-                    duasEstrelas8x8[i].SetActive(true);
-                    tresEstrelas8x8[i].SetActive(true);
-                }
+                    fases8x8[i].ExibirEstrelas(2);
                 else if (PlayerPrefs.GetInt("Estrelas8x8Fase" + i) > 3)
                     PlayerPrefs.SetInt("Estrelas8x8Fase" + i, 3);
             }

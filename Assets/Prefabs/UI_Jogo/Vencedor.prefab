@@ -323,15 +323,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dificuldade: 0
   textMoedas: {fileID: 8031511159058747819}
-  umaEstrela: []
-  duasEstrelas: []
-  tresEstrelas: []
-  umaEstrela5x5: []
-  duasEstrelas5x5: []
-  tresEstrelas5x5: []
-  umaEstrela8x8: []
-  duasEstrelas8x8: []
-  tresEstrelas8x8: []
+  fasesNormais: []
+  fases5x5: []
+  fases8x8: []
   estrelasFase:
   - {fileID: 8031511158361226800}
   - {fileID: 8031511158655785851}
