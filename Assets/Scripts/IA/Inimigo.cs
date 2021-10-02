@@ -3,6 +3,8 @@
 public class Inimigo : MonoBehaviour
 {
     public int casaJogar;
+    [SerializeField]
+    private int maxTentativas = 7;
     public bool iniciarJogada = false;
 
     [SerializeField]
@@ -12,7 +14,7 @@ public class Inimigo : MonoBehaviour
 
     public void Jogar()
     {
-        if (tabuleiro.jogadas != tabuleiro.maxJogadas)
+        if (tabuleiro.jogadas != tabuleiro.maxJogadas && !tabuleiro.jaTerminou)
         {
             if (tabuleiro.jogadorDeX)
             {
@@ -55,6 +57,8 @@ public class Inimigo : MonoBehaviour
                     JogadaAleatoria();
             }
         }
+        else
+            Debug.Log("O jogo já acabou!");
     }
 
     private void JogadaAleatoria()
@@ -65,9 +69,12 @@ public class Inimigo : MonoBehaviour
         {
             associacaoCasas.casasInimigo[casaJogar].Jogar();
             iniciarJogada = false;
+            maxTentativas--;
         }
-        else
+        else if (maxTentativas > 0)
             JogadaAleatoria();
+        else
+            Debug.Log("Inimigo sem opções!");
     }
 
     private bool Verificar(TipoJogador tipo)
