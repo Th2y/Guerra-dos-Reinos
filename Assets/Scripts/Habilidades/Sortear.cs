@@ -10,8 +10,6 @@ public class Sortear : MonoBehaviour
     [SerializeField]
     private Button[] habIA;
     [SerializeField]
-    private Button[] casas;
-    [SerializeField]
     private GameObject[] vez;
 
     public Tabuleiro tabuleiro;
@@ -109,13 +107,12 @@ public class Sortear : MonoBehaviour
                 habJogador[0].interactable = true;
                 habJogador[0].gameObject.SetActive(true);
             }
-                
         }
         else if (i == 1)
         {
             habJogador[1].interactable = true;
             habJogador[1].gameObject.SetActive(true);
-        }            
+        }
         else if (i == 2)
         {
             habJogador[2].interactable = true;

@@ -26,10 +26,10 @@ public class Casas : MonoBehaviour
 
     public void Clicou()
     {
-        for (int i = 0; i < habilidades.casasJogador.Length; i++)
+        for (int i = 0; i < habilidades.associacaoCasas.casasJogador.Length; i++)
         {
-            if (habilidades.casasJogador[i].tipoJogador == TipoJogador.BloqueadoPeloJog)
-                habilidades.casasJogador[i].tipoJogador = TipoJogador.Nenhum;
+            if (habilidades.associacaoCasas.casasJogador[i].tipoJogador == TipoJogador.BloqueadoPeloJog)
+                habilidades.associacaoCasas.casasJogador[i].tipoJogador = TipoJogador.Nenhum;
         }
 
         if (!habilidades.usandoHabilidade || (habilidades.tipoHabilidade != "bloquear" && this.tipoJogador == TipoJogador.Nenhum))
@@ -84,12 +84,12 @@ public class Casas : MonoBehaviour
             this.tipoJogador = TipoJogador.BloqueadoPelaIA;
             sortear.DiminuirJogadas();
 
-            for (int i = 0; i < habilidades.casas.Length; i++)
+            for (int i = 0; i < habilidades.associacaoCasas.casas.Length; i++)
             {
-                if (habilidades.casasJogador[i].tipoJogador != TipoJogador.Nenhum)
-                    habilidades.casas[i].interactable = false;
+                if (habilidades.associacaoCasas.casasJogador[i].tipoJogador != TipoJogador.Nenhum)
+                    habilidades.associacaoCasas.casas[i].interactable = false;
                 else
-                    habilidades.casas[i].interactable = true;
+                    habilidades.associacaoCasas.casas[i].interactable = true;
             }
         }
         habilidades.usandoHabilidade = false;

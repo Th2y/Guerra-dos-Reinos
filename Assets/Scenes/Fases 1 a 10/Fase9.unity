@@ -1560,26 +1560,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4a491dc3be24974c8d3041481f47209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  casas:
-  - {fileID: 2009963100}
-  - {fileID: 464097733}
-  - {fileID: 741450557}
-  - {fileID: 2058107683}
-  - {fileID: 248623588}
-  - {fileID: 1131867477}
-  - {fileID: 1578205283}
-  - {fileID: 1138062805}
-  - {fileID: 812308773}
-  casasJogador:
-  - {fileID: 2009963103}
-  - {fileID: 464097736}
-  - {fileID: 741450560}
-  - {fileID: 2058107686}
-  - {fileID: 248623591}
-  - {fileID: 1131867480}
-  - {fileID: 1578205286}
-  - {fileID: 1138062808}
-  - {fileID: 812308776}
+  associacaoCasas: {fileID: 1653143954}
 --- !u!222 &511333666
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1848,7 +1829,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &552690880
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2441,7 +2422,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &664181442
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2856,7 +2837,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &796717765
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4616,7 +4597,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1337895446
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5624,6 +5605,7 @@ GameObject:
   - component: {fileID: 1653143951}
   - component: {fileID: 1653143952}
   - component: {fileID: 1653143953}
+  - component: {fileID: 1653143954}
   m_Layer: 0
   m_Name: Scripts
   m_TagString: Untagged
@@ -5654,16 +5636,6 @@ MonoBehaviour:
   - {fileID: 637861281}
   - {fileID: 522821131}
   - {fileID: 1483852546}
-  casas:
-  - {fileID: 2009963100}
-  - {fileID: 464097733}
-  - {fileID: 741450557}
-  - {fileID: 2058107683}
-  - {fileID: 248623588}
-  - {fileID: 1131867477}
-  - {fileID: 1578205283}
-  - {fileID: 1138062805}
-  - {fileID: 812308773}
   vez:
   - {fileID: 1521691370}
   - {fileID: 1678449673}
@@ -5702,26 +5674,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   casaJogar: 0
   iniciarJogada: 0
-  casas:
-  - {fileID: 2009963104}
-  - {fileID: 464097737}
-  - {fileID: 741450561}
-  - {fileID: 2058107687}
-  - {fileID: 248623592}
-  - {fileID: 1131867481}
-  - {fileID: 1578205287}
-  - {fileID: 1138062809}
-  - {fileID: 812308777}
-  casasJogador:
-  - {fileID: 2009963103}
-  - {fileID: 464097736}
-  - {fileID: 741450560}
-  - {fileID: 2058107686}
-  - {fileID: 248623591}
-  - {fileID: 1131867480}
-  - {fileID: 1578205286}
-  - {fileID: 1138062808}
-  - {fileID: 812308776}
+  associacaoCasas: {fileID: 1653143954}
   tabuleiro: {fileID: 1976829838}
 --- !u!114 &1653143948
 MonoBehaviour:
@@ -5735,7 +5688,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89b6441cc5cc6824099c3b165e0a4ce1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quantVidas: {fileID: 0}
+  quantVidas: {fileID: 1750655974}
   tempoProxVida: {fileID: 0}
 --- !u!114 &1653143949
 MonoBehaviour:
@@ -5778,26 +5731,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee67942f176ee8240a918068a925bfc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  casas:
-  - {fileID: 2009963100}
-  - {fileID: 464097733}
-  - {fileID: 741450557}
-  - {fileID: 2058107683}
-  - {fileID: 248623588}
-  - {fileID: 1131867477}
-  - {fileID: 1578205283}
-  - {fileID: 1138062805}
-  - {fileID: 812308773}
-  casasJogador:
-  - {fileID: 2009963103}
-  - {fileID: 464097736}
-  - {fileID: 741450560}
-  - {fileID: 2058107686}
-  - {fileID: 248623591}
-  - {fileID: 1131867480}
-  - {fileID: 1578205286}
-  - {fileID: 1138062808}
-  - {fileID: 812308776}
+  associacaoCasas: {fileID: 1653143954}
   usandoHabilidade: 0
   tipoHabilidade: 
   tabuleiro: {fileID: 1976829838}
@@ -5830,6 +5764,48 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inimigo: {fileID: 1653143947}
   sortear: {fileID: 1653143945}
+--- !u!114 &1653143954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653143944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bc74bfc4f104894b9dd5608b446c5f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  casas:
+  - {fileID: 2009963100}
+  - {fileID: 464097733}
+  - {fileID: 741450557}
+  - {fileID: 2058107683}
+  - {fileID: 248623588}
+  - {fileID: 1131867477}
+  - {fileID: 1578205283}
+  - {fileID: 1138062805}
+  - {fileID: 812308773}
+  casasJogador:
+  - {fileID: 2009963103}
+  - {fileID: 464097736}
+  - {fileID: 741450560}
+  - {fileID: 2058107686}
+  - {fileID: 248623591}
+  - {fileID: 1131867480}
+  - {fileID: 1578205286}
+  - {fileID: 1138062808}
+  - {fileID: 812308776}
+  casasInimigo:
+  - {fileID: 2009963104}
+  - {fileID: 464097737}
+  - {fileID: 741450561}
+  - {fileID: 2058107687}
+  - {fileID: 248623592}
+  - {fileID: 1131867481}
+  - {fileID: 1578205287}
+  - {fileID: 1138062809}
+  - {fileID: 812308777}
 --- !u!1 &1678449673
 GameObject:
   m_ObjectHideFlags: 0
@@ -6086,6 +6062,18 @@ MonoBehaviour:
 --- !u!114 &1750655973 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8031511159772088635, guid: 43f133bce0488b04484f82aff5547cc4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1750655968}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1750655974 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8031511160323716231, guid: 43f133bce0488b04484f82aff5547cc4,
     type: 3}
   m_PrefabInstance: {fileID: 1750655968}
   m_PrefabAsset: {fileID: 0}

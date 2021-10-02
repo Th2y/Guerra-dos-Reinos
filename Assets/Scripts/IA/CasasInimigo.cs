@@ -31,10 +31,10 @@ public class CasasInimigo : MonoBehaviour
         sortear.sortear[0].interactable = true;
         sortear.sortear[0].gameObject.SetActive(true);
 
-        for (int i = 0; i < habilidades.casasJogador.Length; i++)
+        for (int i = 0; i < habilidades.associacaoCasas.casasJogador.Length; i++)
         {
-            if (habilidades.casasJogador[i].tipoJogador == TipoJogador.BloqueadoPeloJog)
-                habilidades.casasJogador[i].tipoJogador = TipoJogador.Nenhum;
+            if (habilidades.associacaoCasas.casasJogador[i].tipoJogador == TipoJogador.BloqueadoPeloJog)
+                habilidades.associacaoCasas.casasJogador[i].tipoJogador = TipoJogador.Nenhum;
         }
     }
 }

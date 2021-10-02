@@ -6,9 +6,7 @@ public class Inimigo : MonoBehaviour
     public bool iniciarJogada = false;
 
     [SerializeField]
-    private CasasInimigo[] casas;
-    [SerializeField]
-    private Casas[] casasJogador;
+    private AssociacaoCasas associacaoCasas;
     [SerializeField]
     private Tabuleiro tabuleiro;
 
@@ -21,14 +19,14 @@ public class Inimigo : MonoBehaviour
                 //Verificar se existe alguma possibilidade de vencer
                 if (Verificar(TipoJogador.Bola))
                 {
-                    casas[casaJogar].Jogar();
+                    associacaoCasas.casasInimigo[casaJogar].Jogar();
                     iniciarJogada = false;
                 }
 
                 //Verificar se existe alguma possibilidade de perder
                 else if (Verificar(TipoJogador.Xis))
                 {
-                    casas[casaJogar].Jogar();
+                    associacaoCasas.casasInimigo[casaJogar].Jogar();
                     iniciarJogada = false;
                 }
 
@@ -41,14 +39,14 @@ public class Inimigo : MonoBehaviour
                 //Verificar se existe alguma possibilidade de vencer
                 if (Verificar(TipoJogador.Xis))
                 {
-                    casas[casaJogar].Jogar();
+                    associacaoCasas.casasInimigo[casaJogar].Jogar();
                     iniciarJogada = false;
                 }
 
                 //Verificar se existe alguma possibilidade de perder
                 else if (Verificar(TipoJogador.Bola))
                 {
-                    casas[casaJogar].Jogar();
+                    associacaoCasas.casasInimigo[casaJogar].Jogar();
                     iniciarJogada = false;
                 }
 
@@ -63,9 +61,9 @@ public class Inimigo : MonoBehaviour
     {
         casaJogar = Random.Range(0, 8);
 
-        if (casasJogador[casaJogar].tipoJogador == TipoJogador.Nenhum)
+        if (associacaoCasas.casasJogador[casaJogar].tipoJogador == TipoJogador.Nenhum)
         {
-            casas[casaJogar].Jogar();
+            associacaoCasas.casasInimigo[casaJogar].Jogar();
             iniciarJogada = false;
         }
         else

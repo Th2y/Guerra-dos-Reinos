@@ -3,8 +3,7 @@ using UnityEngine.UI;
 
 public class Habilidades : MonoBehaviour
 {
-    public Button[] casas;
-    public Casas[] casasJogador;
+    public AssociacaoCasas associacaoCasas;
     public bool usandoHabilidade = false;
     public string tipoHabilidade;
     public Tabuleiro tabuleiro;

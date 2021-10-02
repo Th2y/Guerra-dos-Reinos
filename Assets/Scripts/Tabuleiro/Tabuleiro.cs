@@ -151,6 +151,8 @@ public class Tabuleiro : MonoBehaviour
         }
         else if (jogadorVencedor == TipoJogador.Nenhum)
         {
+            jogadorVenceu = true;
+
             if (estrelas_E_Moedas.dificuldade == EnumDificuldade.facil || estrelas_E_Moedas.dificuldade == EnumDificuldade.media)
                 numEstrelas = 2;
             else
