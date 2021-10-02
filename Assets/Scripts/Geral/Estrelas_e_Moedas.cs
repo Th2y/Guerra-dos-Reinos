@@ -152,10 +152,7 @@ public class Estrelas_e_Moedas : MonoBehaviour
     {
         int proxFase = PlayerPrefs.GetInt("ProxFase");
         if (venceu && numFaseAtual > proxFase)
-        {
             PlayerPrefs.SetInt("ProxFase", numFaseAtual);
-            Debug.Log("Salvei a prox fase");
-        }
     }
 
     private void DefinirEstrelas(int num)

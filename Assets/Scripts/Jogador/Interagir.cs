@@ -5,6 +5,8 @@ public class Interagir : MonoBehaviour
 {
     [SerializeField]
     private AssociacaoCasas associacaoCasas;
+    [SerializeField]
+    private Sortear sortear;
 
     private void Start()
     {
@@ -20,10 +22,28 @@ public class Interagir : MonoBehaviour
     {
         for (int i = 0; i < associacaoCasas.casas.Length; i++)
         {
-            if(associacaoCasas.casasJogador[i].tipoJogador == TipoJogador.Nenhum)
-                associacaoCasas.casas[i].interactable = bloqueio;
+            if (sortear.vezJogador)
+            {
+                if (associacaoCasas.casasJogador[i].tipoJogador == TipoJogador.Nenhum ||
+                    associacaoCasas.casasJogador[i].tipoJogador == TipoJogador.BloqueadoPeloJog)
+                {
+                    associacaoCasas.casas[i].interactable = bloqueio;
+                    associacaoCasas.casasJogador[i].tipoJogador = TipoJogador.Nenhum;
+                }                    
+                else
+                    associacaoCasas.casas[i].interactable = false;
+            }
             else
-                associacaoCasas.casas[i].interactable = false;
+            {
+                if (associacaoCasas.casasJogador[i].tipoJogador == TipoJogador.Nenhum ||
+                    associacaoCasas.casasJogador[i].tipoJogador == TipoJogador.BloqueadoPelaIA)
+                {
+                    associacaoCasas.casas[i].interactable = bloqueio;
+                    associacaoCasas.casasJogador[i].tipoJogador = TipoJogador.Nenhum;
+                }
+                else
+                    associacaoCasas.casas[i].interactable = false;
+            }
         }
     }
 }

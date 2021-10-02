@@ -12,8 +12,6 @@ public class CasasInimigo : MonoBehaviour
     private Casas casasJogador;
     [SerializeField]
     private Sortear sortear;
-    [SerializeField]
-    private Habilidades habilidades;
 
     public void Jogar()
     {
@@ -30,11 +28,5 @@ public class CasasInimigo : MonoBehaviour
         sortear.PassarVez();
         sortear.sortear[0].interactable = true;
         sortear.sortear[0].gameObject.SetActive(true);
-
-        for (int i = 0; i < habilidades.associacaoCasas.casasJogador.Length; i++)
-        {
-            if (habilidades.associacaoCasas.casasJogador[i].tipoJogador == TipoJogador.BloqueadoPeloJog)
-                habilidades.associacaoCasas.casasJogador[i].tipoJogador = TipoJogador.Nenhum;
-        }
     }
 }

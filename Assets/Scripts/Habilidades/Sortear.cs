@@ -20,7 +20,7 @@ public class Sortear : MonoBehaviour
     [SerializeField]
     private Animator btnSorteioIA;
 
-    private int i = 0;
+    private int i = 100;
     private int chanceNadaJogador = 0;
     private int chanceNadaIA = 2;
     [SerializeField]
@@ -33,14 +33,21 @@ public class Sortear : MonoBehaviour
         chanceNadaIA += dificuldade;
         chanceNadaJogador += dificuldade;
 
-        if (dificuldade == 1)
-            tabuleiro.estrelas_E_Moedas.dificuldade = EnumDificuldade.facil;
-        else if (dificuldade == 2)
-            tabuleiro.estrelas_E_Moedas.dificuldade = EnumDificuldade.media;
-        else if (dificuldade == 3)
-            tabuleiro.estrelas_E_Moedas.dificuldade = EnumDificuldade.dificil;
-        else if (dificuldade == 4)
-            tabuleiro.estrelas_E_Moedas.dificuldade = EnumDificuldade.superdificil;
+        switch (dificuldade)
+        {
+            case 1:
+                tabuleiro.estrelas_E_Moedas.dificuldade = EnumDificuldade.facil;
+                break;
+            case 2:
+                tabuleiro.estrelas_E_Moedas.dificuldade = EnumDificuldade.media;
+                break;
+            case 3:
+                tabuleiro.estrelas_E_Moedas.dificuldade = EnumDificuldade.dificil;
+                break;
+            default:
+                tabuleiro.estrelas_E_Moedas.dificuldade = EnumDificuldade.superdificil;
+                break;
+        }
     }
 
     public void DiminuirJogadas()

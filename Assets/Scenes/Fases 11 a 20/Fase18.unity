@@ -1759,7 +1759,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4a491dc3be24974c8d3041481f47209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  associacaoCasas: {fileID: 0}
+  associacaoCasas: {fileID: 1653143954}
+  sortear: {fileID: 1653143945}
 --- !u!222 &511333666
 CanvasRenderer:
   m_ObjectHideFlags: 0

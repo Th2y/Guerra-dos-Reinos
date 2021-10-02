@@ -1760,6 +1760,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   associacaoCasas: {fileID: 1653143954}
+  sortear: {fileID: 1653143945}
 --- !u!222 &511333666
 CanvasRenderer:
   m_ObjectHideFlags: 0
