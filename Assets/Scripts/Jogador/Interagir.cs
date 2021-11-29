@@ -15,7 +15,7 @@ public class Interagir : MonoBehaviour
             associacaoCasas.casasJogador[i].numCasa = i;
         }
 
-        Bloquear(true);
+        Bloquear(sortear.tabuleiro.jogadorDeX);
     }
 
     public void Bloquear(bool bloqueio)

@@ -865,7 +865,6 @@ MonoBehaviour:
   xis: {fileID: 1898752642}
   casasJogador: {fileID: 248623591}
   sortear: {fileID: 1653143945}
-  habilidades: {fileID: 1653143951}
 --- !u!1 &294262791
 GameObject:
   m_ObjectHideFlags: 0
@@ -1356,7 +1355,6 @@ MonoBehaviour:
   xis: {fileID: 2085735690}
   casasJogador: {fileID: 464097736}
   sortear: {fileID: 1653143945}
-  habilidades: {fileID: 1653143951}
 --- !u!1 &468153070
 GameObject:
   m_ObjectHideFlags: 0
@@ -2818,7 +2816,6 @@ MonoBehaviour:
   xis: {fileID: 1014310448}
   casasJogador: {fileID: 741450560}
   sortear: {fileID: 1653143945}
-  habilidades: {fileID: 1653143951}
 --- !u!1 &796717764
 GameObject:
   m_ObjectHideFlags: 0
@@ -3244,7 +3241,6 @@ MonoBehaviour:
   xis: {fileID: 1547048984}
   casasJogador: {fileID: 812308776}
   sortear: {fileID: 1653143945}
-  habilidades: {fileID: 1653143951}
 --- !u!1001 &813012768
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4254,7 +4250,6 @@ MonoBehaviour:
   xis: {fileID: 707062920}
   casasJogador: {fileID: 1131867480}
   sortear: {fileID: 1653143945}
-  habilidades: {fileID: 1653143951}
 --- !u!1 &1132622376
 GameObject:
   m_ObjectHideFlags: 0
@@ -4472,7 +4467,6 @@ MonoBehaviour:
   xis: {fileID: 232824896}
   casasJogador: {fileID: 1138062808}
   sortear: {fileID: 1653143945}
-  habilidades: {fileID: 1653143951}
 --- !u!1 &1245673386
 GameObject:
   m_ObjectHideFlags: 0
@@ -5721,7 +5715,6 @@ MonoBehaviour:
   xis: {fileID: 1352822928}
   casasJogador: {fileID: 1578205286}
   sortear: {fileID: 1653143945}
-  habilidades: {fileID: 1653143951}
 --- !u!1 &1645827818
 GameObject:
   m_ObjectHideFlags: 0
@@ -5873,8 +5866,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   casaJogar: 0
+  maxTentativas: 7
   iniciarJogada: 0
-  associacaoCasas: {fileID: 0}
+  associacaoCasas: {fileID: 1653143954}
   tabuleiro: {fileID: 1976829838}
 --- !u!114 &1653143948
 MonoBehaviour:
@@ -5931,7 +5925,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee67942f176ee8240a918068a925bfc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  associacaoCasas: {fileID: 0}
+  associacaoCasas: {fileID: 1653143954}
   usandoHabilidade: 0
   tipoHabilidade: 
   tabuleiro: {fileID: 1976829838}
@@ -6375,6 +6369,7 @@ MonoBehaviour:
   maxJogadas: 9
   jogadas: 0
   jogadorDeX: 0
+  jaTerminou: 0
   combinacoes:
   - casas:
     - {fileID: 2009963103}
@@ -6589,7 +6584,6 @@ MonoBehaviour:
   xis: {fileID: 853624115}
   casasJogador: {fileID: 2009963103}
   sortear: {fileID: 1653143945}
-  habilidades: {fileID: 1653143951}
 --- !u!1 &2026129711
 GameObject:
   m_ObjectHideFlags: 0
@@ -6843,7 +6837,6 @@ MonoBehaviour:
   xis: {fileID: 2026129713}
   casasJogador: {fileID: 2058107686}
   sortear: {fileID: 1653143945}
-  habilidades: {fileID: 1653143951}
 --- !u!1 &2085735688
 GameObject:
   m_ObjectHideFlags: 0

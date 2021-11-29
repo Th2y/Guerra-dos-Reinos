@@ -5,6 +5,8 @@ public class Inimigo : MonoBehaviour
     public int casaJogar;
     [SerializeField]
     private int maxTentativas = 7;
+    [SerializeField]
+    private int numMaxTentativas = 7;
     public bool iniciarJogada = false;
 
     [SerializeField]
@@ -67,12 +69,16 @@ public class Inimigo : MonoBehaviour
 
         if (associacaoCasas.casasJogador[casaJogar].tipoJogador == TipoJogador.Nenhum)
         {
+            maxTentativas = numMaxTentativas;
             associacaoCasas.casasInimigo[casaJogar].Jogar();
-            iniciarJogada = false;
-            maxTentativas--;
+            iniciarJogada = false;            
         }
         else if (maxTentativas > 0)
-            JogadaAleatoria();
+        {
+            maxTentativas--;
+            JogadaAleatoria();            
+        }
+            
         else
             Debug.Log("Inimigo sem opções!");
     }
