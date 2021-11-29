@@ -4,15 +4,15 @@ using UnityEngine.UI;
 public class Interagir : MonoBehaviour
 {
     [SerializeField]
-    private Button[] casas;
+    private AssociacaoCasas associacaoCasas;
     [SerializeField]
-    private Casas[] casasJogador;
+    private Sortear sortear;
 
     private void Start()
     {
-        for (int i = 0; i < casas.Length; i++)
+        for (int i = 0; i < associacaoCasas.casas.Length; i++)
         {
-            casasJogador[i].numCasa = i;
+            associacaoCasas.casasJogador[i].numCasa = i;
         }
 
         Bloquear(true);
@@ -20,12 +20,30 @@ public class Interagir : MonoBehaviour
 
     public void Bloquear(bool bloqueio)
     {
-        for (int i = 0; i < casas.Length; i++)
+        for (int i = 0; i < associacaoCasas.casas.Length; i++)
         {
-            if(casasJogador[i].tipoJogador == TipoJogador.Nenhum)
-                casas[i].interactable = bloqueio;
+            if (sortear.vezJogador)
+            {
+                if (associacaoCasas.casasJogador[i].tipoJogador == TipoJogador.Nenhum ||
+                    associacaoCasas.casasJogador[i].tipoJogador == TipoJogador.BloqueadoPeloJog)
+                {
+                    associacaoCasas.casas[i].interactable = bloqueio;
+                    associacaoCasas.casasJogador[i].tipoJogador = TipoJogador.Nenhum;
+                }                    
+                else
+                    associacaoCasas.casas[i].interactable = false;
+            }
             else
-                casas[i].interactable = false;
+            {
+                if (associacaoCasas.casasJogador[i].tipoJogador == TipoJogador.Nenhum ||
+                    associacaoCasas.casasJogador[i].tipoJogador == TipoJogador.BloqueadoPelaIA)
+                {
+                    associacaoCasas.casas[i].interactable = bloqueio;
+                    associacaoCasas.casasJogador[i].tipoJogador = TipoJogador.Nenhum;
+                }
+                else
+                    associacaoCasas.casas[i].interactable = false;
+            }
         }
     }
 }

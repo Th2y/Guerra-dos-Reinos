@@ -26,7 +26,7 @@ public class Tabuleiro : MonoBehaviour
     private bool jogadorVenceu = false;
 
     private TipoJogador jogadorAtual;
-    private bool jaTerminou = false;
+    public bool jaTerminou = false;
     private bool jaPegouRecompensas = false;
     private float tempoDecorrido = 0f;
     private string nomeDaCena;
@@ -151,6 +151,8 @@ public class Tabuleiro : MonoBehaviour
         }
         else if (jogadorVencedor == TipoJogador.Nenhum)
         {
+            jogadorVenceu = true;
+
             if (estrelas_E_Moedas.dificuldade == EnumDificuldade.facil || estrelas_E_Moedas.dificuldade == EnumDificuldade.media)
                 numEstrelas = 2;
             else

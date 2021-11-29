@@ -3,32 +3,32 @@
 public class Inimigo : MonoBehaviour
 {
     public int casaJogar;
+    [SerializeField]
+    private int maxTentativas = 7;
     public bool iniciarJogada = false;
 
     [SerializeField]
-    private CasasInimigo[] casas;
-    [SerializeField]
-    private Casas[] casasJogador;
+    private AssociacaoCasas associacaoCasas;
     [SerializeField]
     private Tabuleiro tabuleiro;
 
     public void Jogar()
     {
-        if (tabuleiro.jogadas != tabuleiro.maxJogadas)
+        if (tabuleiro.jogadas != tabuleiro.maxJogadas && !tabuleiro.jaTerminou)
         {
             if (tabuleiro.jogadorDeX)
             {
                 //Verificar se existe alguma possibilidade de vencer
                 if (Verificar(TipoJogador.Bola))
                 {
-                    casas[casaJogar].Jogar();
+                    associacaoCasas.casasInimigo[casaJogar].Jogar();
                     iniciarJogada = false;
                 }
 
                 //Verificar se existe alguma possibilidade de perder
                 else if (Verificar(TipoJogador.Xis))
                 {
-                    casas[casaJogar].Jogar();
+                    associacaoCasas.casasInimigo[casaJogar].Jogar();
                     iniciarJogada = false;
                 }
 
@@ -41,14 +41,14 @@ public class Inimigo : MonoBehaviour
                 //Verificar se existe alguma possibilidade de vencer
                 if (Verificar(TipoJogador.Xis))
                 {
-                    casas[casaJogar].Jogar();
+                    associacaoCasas.casasInimigo[casaJogar].Jogar();
                     iniciarJogada = false;
                 }
 
                 //Verificar se existe alguma possibilidade de perder
                 else if (Verificar(TipoJogador.Bola))
                 {
-                    casas[casaJogar].Jogar();
+                    associacaoCasas.casasInimigo[casaJogar].Jogar();
                     iniciarJogada = false;
                 }
 
@@ -57,19 +57,24 @@ public class Inimigo : MonoBehaviour
                     JogadaAleatoria();
             }
         }
+        else
+            Debug.Log("O jogo já acabou!");
     }
 
     private void JogadaAleatoria()
     {
         casaJogar = Random.Range(0, 8);
 
-        if (casasJogador[casaJogar].tipoJogador == TipoJogador.Nenhum)
+        if (associacaoCasas.casasJogador[casaJogar].tipoJogador == TipoJogador.Nenhum)
         {
-            casas[casaJogar].Jogar();
+            associacaoCasas.casasInimigo[casaJogar].Jogar();
             iniciarJogada = false;
+            maxTentativas--;
         }
-        else
+        else if (maxTentativas > 0)
             JogadaAleatoria();
+        else
+            Debug.Log("Inimigo sem opções!");
     }
 
     private bool Verificar(TipoJogador tipo)

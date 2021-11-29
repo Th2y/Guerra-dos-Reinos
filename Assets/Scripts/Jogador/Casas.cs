@@ -26,12 +26,6 @@ public class Casas : MonoBehaviour
 
     public void Clicou()
     {
-        for (int i = 0; i < habilidades.casasJogador.Length; i++)
-        {
-            if (habilidades.casasJogador[i].tipoJogador == TipoJogador.BloqueadoPeloJog)
-                habilidades.casasJogador[i].tipoJogador = TipoJogador.Nenhum;
-        }
-
         if (!habilidades.usandoHabilidade || (habilidades.tipoHabilidade != "bloquear" && this.tipoJogador == TipoJogador.Nenhum))
         {
             if (sortear.tabuleiro.jogadorDeX)
@@ -83,14 +77,6 @@ public class Casas : MonoBehaviour
 
             this.tipoJogador = TipoJogador.BloqueadoPelaIA;
             sortear.DiminuirJogadas();
-
-            for (int i = 0; i < habilidades.casas.Length; i++)
-            {
-                if (habilidades.casasJogador[i].tipoJogador != TipoJogador.Nenhum)
-                    habilidades.casas[i].interactable = false;
-                else
-                    habilidades.casas[i].interactable = true;
-            }
         }
         habilidades.usandoHabilidade = false;
         for(int i = 0; i < sortear.habJogador.Length; i++)
